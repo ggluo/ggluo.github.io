@@ -1,84 +1,132 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@InProceedings{Luo__2021,
+abbr = {ISMRM},
+  author        = {Guanxiong Luo and Xiaoqing Wang and Volkert Roeloffs and Zhengguo Tan and Martin Uecker},
+  booktitle     = {Proc. Intl. Soc. Mag. Reson. Med.},
+  title         = {Joint estimation of coil sensitivities and image content using a deep image prior},
+  year          = {2021},
+  volume        = {29},
+  pages         = {280},
+  address       = {Virtual Conference},
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@InProceedings{Luo__2021a,
+abbr = {ISMRM},
+  author        = {Guanxiong Luo and Moritz Blumenthal and Martin Uecker},
+  booktitle     = {Proc. Intl. Soc. Mag. Reson. Med.},
+  title         = {Using data-driven image priors for image reconstruction with BART},
+  year          = {2021},
+  volume        = {29},
+  pages         = {3768},
+  address       = {Virtual Conference},
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
+@InProceedings{Luo__2022,
+abbr = {ISMRM},
+  Title         = {Using data-driven Markov chains for MRI reconstruction with Joint Uncertainty Estimation},
+  Author        = {Guanxiong Luo and Martin Heide and Martin Uecker},
+  Booktitle     = {Proc. Intl. Soc. Mag. Reson. Med.},
+  year          = {2022},
+
+  address       = {London, UK},
+  pages         = {0298},
+  volume        = {30}
+}
+
+@InProceedings{Luo__2022a,
+abbr = {ISMRM},
+  Title         = {All you need are DICOM images},
+  Author        = {Guanxiong Luo and Moritz Blumenthal and Xiaoqing Wang and Martin Uecker},
+  Booktitle     = {Proc. Intl. Soc. Mag. Reson. Med.},
+  year          = {2022},
+
+  address       = {London, UK},
+  pages         = {1510},
+  volume        = {30},
+  pdf           = {all_dicom.pdf}
+}
+
+@Article{Luo_Magn.Reson.Med._2023,
+abbr={MRM},
+  author   = {Luo, Guanxiong and Blumenthal, Moritz and Heide, Martin and Uecker, Martin},
+  title    = {Bayesian MRI reconstruction with joint uncertainty estimation using diffusion models},
+  journal  = {Magn. Reson. Med.},
+  year     = {2023},
+  volume   = {90},
+  number   = {1},
+  pages    = {295-311},
+  doi      = {10.1002/mrm.29624},
+  keywords = {Bayesian inference, generative modeling, image reconstruction, inverse problems, Markov chain Monte Carlo, posterior sampling},
+  pdf      = {Luo_Magn.Reson.Med._2023.pdf},
+  abstract = {Purpose We introduce a framework that enables efficient sampling from learned probability distributions for MRI reconstruction. Method Samples are drawn from the posterior distribution given the measured k-space using the Markov chain Monte Carlo (MCMC) method, different from conventional deep learning-based MRI reconstruction techniques. In addition to the maximum a posteriori estimate for the image, which can be obtained by maximizing the log-likelihood indirectly or directly, the minimum mean square error estimate and uncertainty maps can also be computed from those drawn samples. The data-driven Markov chains are constructed with the score-based generative model learned from a given image database and are independent of the forward operator that is used to model the k-space measurement. Results We numerically investigate the framework from these perspectives: (1) the interpretation of the uncertainty of the image reconstructed from undersampled k-space; (2) the effect of the number of noise scales used to train the generative models; (3) using a burn-in phase in MCMC sampling to reduce computation; (4) the comparison to conventional L1-wavelet regularized reconstruction; (5) the transferability of learned information; and (6) the comparison to fastMRI challenge. Conclusion A framework is described that connects the diffusion process and advanced generative models with Markov chains. We demonstrate its flexibility in terms of contrasts and sampling patterns using advanced generative priors and the benefits of also quantifying the uncertainty for every pixel.},
+}
+
+@InProceedings{Luo_AIME_2023.pdf,
+abbr = "AIME",
+author="Luo, Guanxiong
+and Kuang, Mengmeng
+and Cao, Peng",
+editor="Juarez, Jose M.
+and Marcos, Mar
+and Stiglic, Gregor
+and Tucker, Allan",
+title="Generalized Deep Learning-Based Proximal Gradient Descent for MR Reconstruction",
+booktitle="Artificial Intelligence in Medicine",
+year="2023",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="239--244",
+abstract="The data consistency for the physical forward model is crucial in inverse problems, especially in MR imaging reconstruction. The standard way is to unroll an iterative algorithm into a neural network with a forward model embedded. The forward model always changes in clinical practice, so the learning component's entanglement with the forward model makes the reconstruction hard to generalize. The deep learning-based proximal gradient descent was proposed and use a network as regularization term that is independent of the forward model, which makes it more generalizable for different MR acquisition settings. This one-time pre-trained regularization is applied to different MR acquisition settings and was compared to conventional L1 regularization showing {\textasciitilde}3 dB improvement in the peak signal-to-noise ratio. We also demonstrated the flexibility of the proposed method in choosing different undersampling patterns.",
+isbn="978-3-031-34344-5",
+pdf="Luo_AIME_2023.pdf"
+}
+
+@Article{Blumenthal_Magn.Reson.Med._2023,
+  abbr ={MRM},
+  author   = {Blumenthal, Moritz and Luo, Guanxiong and Schilling, Martin and Holme, H. Christian M. and Uecker, Martin},
+  title    = {Deep, deep learning with BART},
+  journal  = {Magn. Reson. Med.},
+  year     = {2023},
+  volume   = {89},
+  number   = {2},
+  pages    = {678-693},
+  abstract = {Purpose To develop a deep-learning-based image reconstruction framework for reproducible research in MRI. Methods The BART toolbox offers a rich set of implementations of calibration and reconstruction algorithms for parallel imaging and compressed sensing. In this work, BART was extended by a nonlinear operator framework that provides automatic differentiation to allow computation of gradients. Existing MRI-specific operators of BART, such as the nonuniform fast Fourier transform, are directly integrated into this framework and are complemented by common building blocks used in neural networks. To evaluate the use of the framework for advanced deep-learning-based reconstruction, two state-of-the-art unrolled reconstruction networks, namely the Variational Network and MoDL, were implemented. Results State-of-the-art deep image-reconstruction networks can be constructed and trained using BART's gradient-based optimization algorithms. The BART implementation achieves a similar performance in terms of training time and reconstruction quality compared to the original implementations based on TensorFlow. Conclusion By integrating nonlinear operators and neural networks into BART, we provide a general framework for deep-learning-based reconstruction in MRI.},
+  doi      = {https://doi.org/10.1002/mrm.29485},
+  eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/mrm.29485},
+  keywords = {automatic differentiation, deep learning, image reconstruction, inverse problems, MRI, parallel imaging},
+  url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.29485},
+  pdf = {Blumenthal_Magn.Reson.Med._2023.pdf}
+}
+
+@InProceedings{Blumenthal__2022,
+abbr = {ISMRM},
+  author    = {Blumenthal, Moritz and Luo, Guanxiong and Schilling, Martin and Haltmeier, Markus and Uecker, Martin},
+  title     = {{NLINV-Net}: Self-Supervised End-2-End Learning for Reconstructing Undersampled Radial Cardiac Real-Time Data},
+  booktitle = {Proc. Intl. Soc. Mag. Reson. Med.},
+  year      = {2022},
+  volume    = {30},
+  pages     = {0499},
+  address   = {London, UK},
+}
+
+@Article{Luo_Magn.Reson.Med._2020,
+abbr={MRM},
+  author    = {Guanxiong Luo and Na Zhao and Wenhao Jiang and Edward S. Hui and Peng Cao},
+  title     = {{MRI} reconstruction using deep Bayesian estimation},
+  doi       = {10.1002/mrm.28274},
+  number    = {4},
+  pages     = {2246--2261},
+  volume    = {84},
+  file      = {:pdf/Luo_Magn.Reson.Med._2020.pdf:PDF},
+  journal   = {Magn. Reson. Med.},
+  month     = {apr},
+  publisher = {Wiley},
+  year      = {2020},
+  url={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
   doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  selected={true}
-}
+  pdf = {Luo_Magn.Reson.Med._2020.pdf},
+  abstract = {Purpose To develop a deep learning-based Bayesian estimation for MRI reconstruction. Methods We modeled the MRI reconstruction problem with Bayes's theorem, following the recently proposed PixelCNN++ method. The image reconstruction from incomplete k-space measurement was obtained by maximizing the posterior possibility. A generative network was utilized as the image prior, which was computationally tractable, and the k-space data fidelity was enforced by using an equality constraint. The stochastic backpropagation was utilized to calculate the descent gradient in the process of maximum a posterior, and a projected subgradient method was used to impose the equality constraint. In contrast to the other deep learning reconstruction methods, the proposed one used the likelihood of prior as the training loss and the objective function in reconstruction to improve the image quality. Results The proposed method showed an improved performance in preserving image details and reducing aliasing artifacts, compared with GRAPPA, -ESPRiT, model-based deep learning architecture for inverse problems (MODL), and variational network (VN), last two were state-of-the-art deep learning reconstruction methods. The proposed method generally achieved more than 3 dB peak signal-to-noise ratio improvement for compressed sensing and parallel imaging reconstructions compared with the other methods. Conclusions The Bayesian estimation significantly improved the reconstruction performance, compared with the conventional L1-sparsity prior in compressed sensing reconstruction tasks. More importantly, the proposed reconstruction framework can be generalized for most MRI reconstruction scenarios.},
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif}
 }
