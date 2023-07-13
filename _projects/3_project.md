@@ -1,11 +1,12 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
-importance: 3
+title: Using generative image priors for image reconstruction with BART
+description: MR image reconstruction, model deployment, TensorFlow C API, TensorFlow computation graph
+img: #assets/img/7.jpg
+importance: 5
 category: work
+github: https://github.com/mrirecon/bart
+colab: https://colab.research.google.com/github/mrirecon/bart-workshop/blob/master/ismrm2021/bart_tensorflow/bart_tf.ipynb
 ---
 
 Every project has a beautiful feature showcase page.
