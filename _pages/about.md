@@ -6,18 +6,22 @@ subtitle: A final year Ph.D. candidate in computer science from the University o
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: photo_ski.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>office: ggluo@github</p>
+    <p>email: luoguan5@gmail.com</p>
+    <p>Göttingen, Germany</p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
+
+I'm doing my Ph.D. in computer science, at University of Goettingen from 2020. I worked closely with [Prof. Dr. Martin Uecker](https://scholar.google.com/citations?user=r7BG-ZYAAAAJ&hl=en) at UMG and [IBI](https://www.tugraz.at/institute/ibi/institute/team/) at Graz University of Technology.
+
+My academic background is machine learning, magnetic resonance imaging, signal/image processing, optimization, inverse problems. 
 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
