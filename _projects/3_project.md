@@ -2,7 +2,7 @@
 layout: page
 title: Using generative image priors for image reconstruction with BART
 description: MR image reconstruction, model deployment, TensorFlow C API, TensorFlow computation graph
-img: #assets/img/7.jpg
+img: assets/img/projects/bart_tf.png
 importance: 5
 category: work
 github: https://github.com/mrirecon/bart

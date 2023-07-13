@@ -2,7 +2,7 @@
 layout: page
 title: Generative pretrained image priors for MRI reconstruction
 description: generative pretraining, image priors, diffusion models, inverse problem, MR image reconstruction, proximal operator, optimization
-img: #assets/img/12.jpg
+img: assets/img/projects/image_priors.png
 importance: 5
 category: work
 github: https://github.com/ggluo/image-priors
