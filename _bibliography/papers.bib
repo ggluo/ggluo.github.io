@@ -10,6 +10,7 @@ abbr = {ISMRM},
   volume        = {29},
   pages         = {280},
   address       = {Virtual Conference},
+  pre = {Oral}
 }
 
 @InProceedings{Luo__2021_a,
@@ -21,6 +22,7 @@ abbr = {ISMRM},
   volume        = {29},
   pages         = {3768},
   address       = {Virtual Conference},
+  pre = {Poster}
 }
 
 @InProceedings{Luo__2022,
@@ -32,7 +34,8 @@ abbr = {ISMRM},
 
   address       = {London, UK},
   pages         = {0298},
-  volume        = {30}
+  volume        = {30},
+  pre = {Power Pitch}
 }
 
 @InProceedings{Luo__2022a,
@@ -45,7 +48,8 @@ abbr = {ISMRM},
   address       = {London, UK},
   pages         = {1510},
   volume        = {30},
-  pdf           = {all_dicom.pdf}
+  pdf           = {all_dicom.pdf},
+  pre = {Poster}
 }
 
 @Article{Luo_Magn.Reson.Med._2023,
@@ -61,6 +65,7 @@ abbr={MRM},
   keywords = {Bayesian inference, generative modeling, image reconstruction, inverse problems, Markov chain Monte Carlo, posterior sampling},
   pdf      = {Luo_Magn.Reson.Med._2023.pdf},
   abstract = {Purpose We introduce a framework that enables efficient sampling from learned probability distributions for MRI reconstruction. Method Samples are drawn from the posterior distribution given the measured k-space using the Markov chain Monte Carlo (MCMC) method, different from conventional deep learning-based MRI reconstruction techniques. In addition to the maximum a posteriori estimate for the image, which can be obtained by maximizing the log-likelihood indirectly or directly, the minimum mean square error estimate and uncertainty maps can also be computed from those drawn samples. The data-driven Markov chains are constructed with the score-based generative model learned from a given image database and are independent of the forward operator that is used to model the k-space measurement. Results We numerically investigate the framework from these perspectives: (1) the interpretation of the uncertainty of the image reconstructed from undersampled k-space; (2) the effect of the number of noise scales used to train the generative models; (3) using a burn-in phase in MCMC sampling to reduce computation; (4) the comparison to conventional L1-wavelet regularized reconstruction; (5) the transferability of learned information; and (6) the comparison to fastMRI challenge. Conclusion A framework is described that connects the diffusion process and advanced generative models with Markov chains. We demonstrate its flexibility in terms of contrasts and sampling patterns using advanced generative priors and the benefits of also quantifying the uncertainty for every pixel.},
+  pre = {Oral}
 }
 
 @InProceedings{Luo_AIME_2023.pdf,
@@ -80,7 +85,8 @@ address="Cham",
 pages="239--244",
 abstract="The data consistency for the physical forward model is crucial in inverse problems, especially in MR imaging reconstruction. The standard way is to unroll an iterative algorithm into a neural network with a forward model embedded. The forward model always changes in clinical practice, so the learning component's entanglement with the forward model makes the reconstruction hard to generalize. The deep learning-based proximal gradient descent was proposed and use a network as regularization term that is independent of the forward model, which makes it more generalizable for different MR acquisition settings. This one-time pre-trained regularization is applied to different MR acquisition settings and was compared to conventional L1 regularization showing {\textasciitilde}3 dB improvement in the peak signal-to-noise ratio. We also demonstrated the flexibility of the proposed method in choosing different undersampling patterns.",
 isbn="978-3-031-34344-5",
-pdf="Luo_AIME_2023.pdf"
+pdf="Luo_AIME_2023.pdf",
+pre = "Poster"
 }
 
 @Article{Blumenthal_Magn.Reson.Med._2023,
@@ -97,7 +103,8 @@ pdf="Luo_AIME_2023.pdf"
   eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/mrm.29485},
   keywords = {automatic differentiation, deep learning, image reconstruction, inverse problems, MRI, parallel imaging},
   url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.29485},
-  pdf = {Blumenthal_Magn.Reson.Med._2023.pdf}
+  pdf = {Blumenthal_Magn.Reson.Med._2023.pdf},
+  pre = {Highlighted}
 }
 
 @InProceedings{Blumenthal__2022,
@@ -109,6 +116,7 @@ abbr = {ISMRM},
   volume    = {30},
   pages     = {0499},
   address   = {London, UK},
+  pre = {Oral}
 }
 
 @Article{Luo_Magn.Reson.Med._2020,
@@ -128,5 +136,5 @@ abbr={MRM},
   doi={10.1103/PhysRev.47.777},
   pdf = {Luo_Magn.Reson.Med._2020.pdf},
   abstract = {Purpose To develop a deep learning-based Bayesian estimation for MRI reconstruction. Methods We modeled the MRI reconstruction problem with Bayes's theorem, following the recently proposed PixelCNN++ method. The image reconstruction from incomplete k-space measurement was obtained by maximizing the posterior possibility. A generative network was utilized as the image prior, which was computationally tractable, and the k-space data fidelity was enforced by using an equality constraint. The stochastic backpropagation was utilized to calculate the descent gradient in the process of maximum a posterior, and a projected subgradient method was used to impose the equality constraint. In contrast to the other deep learning reconstruction methods, the proposed one used the likelihood of prior as the training loss and the objective function in reconstruction to improve the image quality. Results The proposed method showed an improved performance in preserving image details and reducing aliasing artifacts, compared with GRAPPA, -ESPRiT, model-based deep learning architecture for inverse problems (MODL), and variational network (VN), last two were state-of-the-art deep learning reconstruction methods. The proposed method generally achieved more than 3 dB peak signal-to-noise ratio improvement for compressed sensing and parallel imaging reconstructions compared with the other methods. Conclusions The Bayesian estimation significantly improved the reconstruction performance, compared with the conventional L1-sparsity prior in compressed sensing reconstruction tasks. More importantly, the proposed reconstruction framework can be generalized for most MRI reconstruction scenarios.},
-
+  pre = {Oral}
 }

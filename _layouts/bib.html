@@ -23,6 +23,10 @@
             <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
           {%- else -%}
             <abbr class="badge">{{entry.abbr}}</abbr>
+            {%- if entry.pre -%}
+            <br>
+            <span class="badge"><span style="color:rgb(85, 151, 113)">{{entry.pre}}</span></span>
+            {%- endif -%}
           {%- endif -%}
         {%- endif -%}
         </div>
