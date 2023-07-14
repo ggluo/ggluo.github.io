@@ -7,6 +7,8 @@ importance: 5
 category: work
 github: https://github.com/mrirecon/bart
 colab: https://colab.research.google.com/github/mrirecon/bart-workshop/blob/master/ismrm2021/bart_tensorflow/bart_tf.ipynb
+related_publications: Luo__2021_a, Blumenthal_Magn.Reson.Med._2023
+
 ---
 
 Every project has a beautiful feature showcase page.

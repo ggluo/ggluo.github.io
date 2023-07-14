@@ -5,6 +5,7 @@ description: generative model, PixelCNN, Bayesian estimation, MR image reconstru
 img: assets/img/projects/aime_2023.png
 importance: 5
 github: https://github.com/ggluo/proximator-net
+related_publications: Luo_AIME_2023
 ---
 
 

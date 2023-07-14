@@ -6,6 +6,7 @@ img: assets/img/projects/sampling_posterior.png
 importance: 5
 github: https://github.com/mrirecon/spreco
 colab: https://colab.research.google.com/github/mrirecon/spreco/blob/main/examples/scripts/demo_recon.ipynb
+related_publications: Luo_Magn.Reson.Med._2023, Luo__2022_a
 ---
 
 The application of generative models in MRI reconstruction
