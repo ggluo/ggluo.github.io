@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Generalized deep learning-based proximal gradient descent for MR reconstruction
-description: generative model, PixelCNN, Bayesian estimation, MR image reconstruction, optimization
+description: MR image reconstruction, proximal gradient descent, denoising autoencoder
 img: assets/img/projects/aime/aime_2023.png
 importance: 5
 github: https://github.com/ggluo/proximator-net
