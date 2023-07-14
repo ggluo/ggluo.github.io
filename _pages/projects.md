@@ -2,11 +2,12 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: ddd
+description: MR research is not rocket science, but also very cool 😃!
 nav: true
 nav_order: 1
 horizontal: true
 ---
+I have been working on MR image reconstruction over the past five years.
 
 <!-- pages/projects.md -->
 <div class="projects">

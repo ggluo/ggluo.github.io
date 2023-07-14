@@ -9,7 +9,7 @@ related_publications: Luo_Magn.Reson.Med._2020
 ---
 
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem">
-{% include figure.html path="assets/img/projects/map/overview.png" width="350" title="overview" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/map/overview.png" width="400" title="overview" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post">
     Figure 1. Overview of the proposed method.
 </div>
