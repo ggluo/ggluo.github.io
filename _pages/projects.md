@@ -7,7 +7,7 @@ nav: true
 nav_order: 1
 horizontal: true
 ---
-I have been working on MR image reconstruction over the past five years.
+Over the past five year, I have been actively working on MR image reconstruction over the past, closely following the rapid developments in the machine learning community.
 
 <!-- pages/projects.md -->
 <div class="projects">
