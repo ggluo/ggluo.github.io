@@ -40,14 +40,14 @@ Samples are drawn from the posterior distribution given the k-space using the Ma
 chain Monte Carlo (MCMC) method. The minimum mean square error (MMSE)
 and maximum a posterior (MAP) estimates are computed. The chains are the reverse of a diffusion process (c.f., Figure 1). Score-based generative models are
 used to construct chains and are learned from an image database.
- The unknown data distribution $$q(\mathbf{x}_0)$$ of the training images goes through repeated Gaussian diffusion and
-  finally reaches a known Gaussian distribution $$q(\mathbf{x}_N)$$, and this process is reversed by learned transition kernels $$p_\theta(\mathbf{x}_{i-1}|\mathbf{x}_i )$$. To simulate samples from the
-  posterior of the image given the [k-space](https://en.wikipedia.org/wiki/K-space_(magnetic_resonance_imaging)), $$\mathbf{y}$$, a new Markov chain is constructed by incorporating the measurement model into the reverse process (red chain).
+The unknown data distribution $$q(x_0)$$ of the training images goes through repeated Gaussian diffusion and
+finally reaches a known Gaussian distribution $$q(x_N)$$, and this process is reversed by learned transition kernels $$p_\theta(x_{i-1}|x_i)$$. To simulate samples from the
+posterior of the image given the [k-space](https://en.wikipedia.org/wiki/K-space_(magnetic_resonance_imaging)), $$y$$, a new Markov chain is constructed by incorporating the measurement model into the reverse process (red chain).
 
 
 
-**`Highlight`** In Figure 3, reconstructions are $$\ell_1$$-ESPIRiT, XPDNet, $$\mathbf{x}_\text{MMSE}$$
-highlighted with confidence interval (CI), $$\mathbf{x}_\text{MMSE}$$
+**`Highlight`** In Figure 3, reconstructions are $$\ell_1$$-ESPIRiT, XPDNet, $$x_\text{MMSE}$$
+highlighted with confidence interval (CI), $$x_\text{MMSE}$$
 and a fully-sampled coil-combined image (CoilComb). All methods provide nearly aliasing-free reconstruction at four- or eightfold acceleration. Hallucinations
 appear when using 8-fold acceleration and are highlighted with
 CI after thresholding. 
@@ -59,24 +59,24 @@ Selected regions of interests are presented in a zoomed view.
 </div>
 </div>
 
-**`Theory`** Using Bayes' formula one obtains for each $$i$$ the desired distribution $$p\left (\mathbf{x}_i \mid \mathbf{y}\right )$$ from 
+**`Theory`** Using Bayes' formula one obtains for each $$i$$ the desired distribution $$p\left (x_i \mid y\right )$$ from 
 \begin{equation}
-p\left(\mathbf{x}_i \mid \mathbf{y}\right) \propto p\left(\mathbf{x}_i\right) p\left(\mathbf{y} \mid \mathbf{x}_i\right)\quad \text{with}\quad p(\mathbf{y}|\mathbf{x}_i) = \mathcal{CN}\left(\mathbf{y};\mathcal{A} \mathbf{x}\_i, {\sigma}^2\_{\eta} \mathbf{I}\right), \nonumber
+p\left(x\_i \mid y\right) \propto p\left(x\_i\right) p\left(y \mid x\_i\right)\quad \text{with}\quad p(y|x\_i) = \mathcal{CN}\left(y;\mathcal{A} x\_i, {\sigma}^2\_{\eta} {I}\right), \nonumber
 \end{equation}
-where $$\mathcal{A}$$ is the parallel MRI forward model, $$\mathbf{x}_i$$ is the $$i$$-th image and $$\mathbf{y}$$ is given k-space data (c.f. Figure 1).
-Starting with the initial density $$q(\mathbf{x}_N)\sim \mathcal{CN}(0,I)$$ at $$i=N$$, one obtains $$p(\mathbf{x}_i)$$ with transition kernels $$\{p(\mathbf{x}_j | \mathbf{x}_{j+1})\}_{i \leq j < N}$$ 
+where $$\mathcal{A}$$ is the parallel MRI forward model, $$x_i$$ is the $$i$$-th image and $$y$$ is given k-space data (c.f. Figure 1).
+Starting with the initial density $$q(x_N)\sim \mathcal{CN}(0,I)$$ at $$i=N$$, one obtains $$p(x_i)$$ with transition kernels $$\{p(x_j | x_{j+1})\}_{i \leq j < N}$$ 
 \begin{equation}
-p(\mathbf{x}\_i) \propto p(\mathbf{x}\_i | \mathbf{x}\_{i+1}) \cdot ... \cdot p(\mathbf{x}_{N-1} | \mathbf{x}_N) \cdot q(\mathbf{x}_N).\nonumber
+p(x\_i) \propto p(x\_i | x\_{i+1}) \cdot ... \cdot p(x_{N-1} | x_N) \cdot q(x_N).\nonumber
 \end{equation}
-By estimating the transition kernel with the neural network, one obtains the kernel $$p_\theta(\mathbf{x}_i \mid \mathbf{x}_{i+1})$$ and therefore one can sample $$p_\theta(\mathbf{x}_i | y)$$ with the unadjusted Langevin Monte Carlo method in order to get an estimate of $$\mathbf{x}_i$$, i.e.
+By estimating the transition kernel with the neural network, one obtains the kernel $$p_\theta(x_i \mid x_{i+1})$$ and therefore one can sample $$p_\theta(x_i | y)$$ with the unadjusted Langevin Monte Carlo method in order to get an estimate of $$x_i$$, i.e.
 \begin{equation}
-\mathbf{x}\_i^{k+1} \leftarrow \mathbf{x}\_i^{k} + \frac{\gamma}{2}\nabla\_{\mathbf{x}\_i}\log p\_\theta(\mathbf{x}\_{i}^{k}\mid y) + \sqrt{\gamma}\mathbf{z},\quad z \sim \mathcal{CN}(0, \mathbf{I}),\nonumber
+x\_i^{k+1} \leftarrow x\_i^{k} + \frac{\gamma}{2}\nabla\_{x\_i}\log p\_\theta(x\_{i}^{k}\mid y) + \sqrt{\gamma}{z},\quad z \sim \mathcal{CN}(0, {I}),\nonumber
 \end{equation}
-with stepsize $$\gamma > 0$$, $$k=1,...,K$$ and $$\mathbf{x}_i^1 := \mathbf{x}^K_{i+1}$$ with $$\mathbf{x}_N^1 \sim \mathcal{CN}(0, \mathbf{I})$$. 
+with stepsize $$\gamma > 0$$, $$k=1,...,K$$ and $$x_i^1 := x^K_{i+1}$$ with $$x_N^1 \sim \mathcal{CN}(0, {I})$$. 
 
 **`MMSE vs MAP`** 200 extended iterations after random exploration (i.e, without noise disturbance) and a deterministic estimate of
       MAP are indicated by solid and dashed lines respectively. (a) PSNR and SSIM over iterations. (b) Variance$$_\text{1}$$ and
-      variance$$_\text{2}$$ were computed from unextended samples and extended samples respectively. Extended samples converge to $$\mathbf{x}_\text{MAP}$$.
+      variance$$_\text{2}$$ were computed from unextended samples and extended samples respectively. Extended samples converge to $$x_\text{MAP}$$.
 
 <div class="col-sm mt-3 mt-md-0">
 {% include figure.html path="assets/img/projects/sampling_posterior/map_end.png" title="overview" class="img-fluid rounded z-depth-1" %}
