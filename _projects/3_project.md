@@ -44,7 +44,7 @@ where the first term ensures data consistency between the acquired [k-space](htt
 Figure 3 displays the evolution of image during the process of reconstruction.
 <div style="margin-bottom: 0rem">
 <div style="margin-bottom: -0.5rem">
-{% include video.html path="assets/img/projects/bart_tf/evo.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true muted%}
+{% include video.html path="assets/img/projects/bart_tf/evo.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true muted=true %}
 </div>
 <div class="caption_post" style="margin-bottom: 1rem">
     Figure 3. The left sub-figure shows the evolution of the probability density function (PDF) (dashed curves) and the empirically learned PDF (solid curves) at five selected pixels over iterations. The middle sub-figure shows the evolution of magnitude image. The right sub-figure shows the convergence of metrics.
