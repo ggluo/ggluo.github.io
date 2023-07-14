@@ -2,7 +2,7 @@
 layout: page
 title: Bayesian MRI reconstruction with joint uncertainty estimation using diffusion models
 description: sampling posterior, Bayesian inference, diffusion models, uncertainty estimation, inverse problem, MR image reconstruction
-img: assets/img/projects/sampling_posterior.png
+img: assets/img/projects/sampling_posterior/sampling_posterior.png
 importance: 5
 github: https://github.com/mrirecon/spreco
 colab: https://colab.research.google.com/github/mrirecon/spreco/blob/main/examples/scripts/demo_recon.ipynb
