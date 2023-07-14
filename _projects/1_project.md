@@ -15,6 +15,8 @@ related_publications: Luo__2022a, Luo__2021_b, Luo__2021_a, Luo_Magn.Reson.Med._
 </div>
 </div>
 
+**`This project is ongoing and will be ready soon!`** 
+
 In this work, we present a workflow to train generic and 
 robust generative image priors from magnitude images. The priors can then 
 be used for regularization in reconstruction to improve image quality.
