@@ -29,7 +29,7 @@ missing k-space data points. The uncertainty from missing
 k-space data points can be addressed in a Bayesian imaging framework. 
 
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem;">
-{% include video.html path="assets/img/projects/sampling_posterior/samples.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true muted=true %}
+{% include video.html path="assets/img/projects/sampling_posterior/r_samples.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true muted=true %}
 <div class="caption_post" style="margin-bottom: 0.5rem; margin-top: -0.5rem">
     Figure 3. Visualization of the iterations.
 </div>
