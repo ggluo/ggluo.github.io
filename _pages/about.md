@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: A final year Ph.D. candidate in computer science from the University of Göttingen
+subtitle: Glad that this corner is found by you 😃!
 
 profile:
   align: right
@@ -21,7 +21,7 @@ social: false  # includes social icons at the bottom of the page
 
 I'm doing my Ph.D. in computer science, at University of Goettingen from 2020. I worked closely with [Prof. Dr. Martin Uecker](https://scholar.google.com/citations?user=r7BG-ZYAAAAJ&hl=en) at UMG and [IBI](https://www.tugraz.at/institute/ibi/institute/team/) at Graz University of Technology.
 
-
+A final year Ph.D. candidate in computer science from the University of Göttingen
 
 My academic background is machine learning, magnetic resonance imaging, signal/image processing, optimization, inverse problems. 
 

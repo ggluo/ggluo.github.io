@@ -10,7 +10,7 @@ related_publications: Luo_AIME_2023
 
 Before employing deep learning in accelerated MRI reconstruction, conventional methods for parallel MR imaging are based on the numerical pseudo-inversion of ill-posed
 MRI encoding matrix, which could be prone to reconstruction error at poor conditioning.
-The encoding matrix comprises the k-space under-sampling scheme, coil
+The encoding matrix comprises the [k-space](https://en.wikipedia.org/wiki/K-space_(magnetic_resonance_imaging)) under-sampling scheme, coil
 sensitivities, Fourier transform. The traditional reconstruction involves some gradient
 descent methods for minimizing the cost function of the k-space fidelity and the regularization term
 

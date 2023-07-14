@@ -7,17 +7,18 @@ importance: 5
 github: https://github.com/mrirecon/spreco
 related_publications: Luo_Magn.Reson.Med._2020
 ---
-
-<div style="float: right; margin-left: 1rem; margin-bottom: 0rem">
+<div style="margin-bottom: 0rem">
+<div style="float: right; margin-left: 1rem; margin-bottom: -1rem">
 {% include figure.html path="assets/img/projects/map/overview.png" width="400" title="overview" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post">
     Figure 1. Overview of the proposed method.
 </div>
 </div>
+</div>
 
 **`Abstract`** We developed a deep learning-based Bayesian estimation for MRI
 reconstruction. The image reconstruction from
-incomplete k-space measurement was obtained by maximizing the posterior probability (MAP).
+incomplete [k-space](https://en.wikipedia.org/wiki/K-space_(magnetic_resonance_imaging)) measurement was obtained by maximizing the posterior probability (MAP).
 The autoregressive generative model [PixelCNN](https://arxiv.org/abs/1701.05517) was utilized as the image prior
 and the k-space data fidelity was enforced by using an equality constraint.
 The stochastic back-propagation was utilized to calculate the descent gradient in the
