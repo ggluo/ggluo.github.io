@@ -17,7 +17,7 @@ related_publications: Luo__2021_a, Blumenthal_Magn.Reson.Med._2023
 </div>
 
 **`Abstract`** 
-Building on this previous [project](/projects/4_project/), this work aims to deploy the trained model with an MR image reconstruction toolbox, **[BART](https://github.com/mrirecon/bart)**, which is a versatile framework for image reconstruction. As shown in Figure 1, there are two steps to realize this: (a) export the constructed computation graph with Tensorflow; (b) use the graph as regularization in BART.
+Building on this previous [project](/projects/4_project/), this work aims to deploy the trained model with an MR image reconstruction toolbox, **[BART](https://github.com/mrirecon/bart)**, which is a versatile framework for image reconstruction. As shown in Figure 1, there are two steps to realize this: (a) export the constructed computation graph with TensorFlow; (b) use the graph as regularization in BART.
 We validated the reconstruction pipeline using radial brain scans and the [SENSE](https://pubmed.ncbi.nlm.nih.gov/10542355/) model regularized by a log-likelihood image prior.
 
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem; margin-top: 1rem">
@@ -39,10 +39,8 @@ The reconstruction is commonly formulated as the following minimization problem
     \hat{x}=\underset{x}{\arg\min}\ \|\mathcal{A}{x}-{y}\|_2^2 + \lambda \log p({x};\mathtt{NET}(\hat{\Theta}, {x})),\nonumber
     \label{eq:1}
 \end{equation}
-where the first term ensures data consistency between the acquired [k-space](https://en.wikipedia.org/wiki/K-space_(magnetic_resonance_imaging)) data $${y}$$ and the desired image $${x}$$, $$\mathcal{A}$$ is the forward operator. This problem is solved with [FISTA](https://www.ceremade.dauphine.fr/~carlier/FISTA) algorithm that has been implemented in BART.
+where the first term ensures data consistency between the acquired [k-space](https://en.wikipedia.org/wiki/K-space_(magnetic_resonance_imaging)) data $${y}$$ and the desired image $${x}$$, $$\mathcal{A}$$ is the forward operator. This problem is solved with [FISTA](https://www.ceremade.dauphine.fr/~carlier/FISTA) algorithm that has been implemented in BART. To use the learned log-likelihood prior with BART, we have implemented a [wrapper](https://github.com/mrirecon/bart/commit/8b8d4ed2a727bcbc19a11e9ddd64d46f7e5e21d9) using [TensorFlow C API]([$$^1$$](https://www.tensorflow.org/install/lang_c)) for the initialization, restoration and inference of the exported trained model. Click here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrirecon/bart-workshop/blob/master/ismrm2021/bart_tensorflow/bart_tf.ipynb) and give a quick tryout!
 
-The initialization of an exported graph, the restoration of a saved model, and the
-inference are implemented with TF’s C API
 Figure 3 displays the evolution of image during the process of reconstruction.
 <div style="margin-bottom: 0rem">
 <div style="margin-bottom: -0.5rem">
@@ -54,8 +52,5 @@ Figure 3 displays the evolution of image during the process of reconstruction.
 </div>
 
 
-
-
-**`Conclusion`** Trained neural networks can be incorporated into established MRI reconstruction
-routines within the BART toolbox. In this work, we demonstrate
-training of the prior and implementation of reconstruction pipelines as a proof of concept.
+**`Conclusion`** We showcased the seamless integration of a TensorFlow trained model into the existing MRI reconstruction workflows of the BART toolbox. 
+This integration allows us to leverage the image reconstruction capabilities offered by BART while harnessing the advantages of rapid prototyping of advanced deep learning models using TensorFlow.
