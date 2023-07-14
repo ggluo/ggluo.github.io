@@ -7,7 +7,7 @@ nav: true
 nav_order: 1
 horizontal: true
 ---
-Over the past five years, I have been actively working on MR image reconstruction, closely following the rapid developments in the machine learning community. I have developed a Python library for training generative models **[spreco](https://github.com/mrirecon/spreco)**, based on TensorFlow. With that, I have trained many medical image priors that are hosted on this [huggingface page](https://huggingface.co/Guanxiong/MRI-Image-Priors) and used them to improve reconstruction.
+Over the past five years, I have been actively working on MR image reconstruction, closely following the rapid developments in the machine learning community. I have developed a Python library for training generative models **[spreco](https://github.com/mrirecon/spreco)**, based on TensorFlow. With that, I have trained many medical image priors that are hosted on this **[huggingface page](https://huggingface.co/Guanxiong/MRI-Image-Priors)** and used them to improve reconstruction.
 
 <!-- pages/projects.md -->
 <div class="projects">

@@ -28,6 +28,8 @@ network; and (2) the uncertainty introduced by the
 missing k-space data points. The uncertainty from missing
 k-space data points can be addressed in a Bayesian imaging framework. 
 
+**`TLDR`** All in all, a deep learning-based method has enough capability to generate a realistic-looking image even when the problem is highly underdetermined as a result of undersampling, but the uncertainties inside it cannot be ignored.
+
 
 <div style="float: right;margin-right: 0rem; margin-left: 1rem; margin-bottom: 0rem; width: auto; ">
 {% include video.html path="assets/img/projects/sampling_posterior/r_samples.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true muted=true %}
