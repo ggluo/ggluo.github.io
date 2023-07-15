@@ -23,7 +23,7 @@ I'm currently doing my Ph.D. in computer science at University of Göttingen. Th
 My academic background is machine learning, magnetic resonance imaging, signal/image processing, optimization, inverse problems. 
 I am truly passionate about remaining at the intersection of these fields and driving innovation alongwith fellow researchers from the sides of both MR and machine learning. Feel free to explore my [CV](/assets/pdf/cv.pdf) to learn more about me.
 
-Over the past five year, I have been actively working on MR image reconstruction, closely following the rapid developments in the machine learning community. 
+Over the past five years, I have been actively working on MR image reconstruction, closely following the rapid developments in the machine learning community. 
 I have developed a Python library for training generative models **[spreco](https://github.com/mrirecon/spreco)**, based on TensorFlow. This library has been used in many of my [projects](/projects/) focused on MR image reconstruction.
 
 
