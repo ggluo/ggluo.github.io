@@ -23,7 +23,9 @@ The stochastic back-propagation was utilized to calculate the descent gradient i
 process of maximum a posterior, and a projected sub-gradient method was used to
 impose the equality constraint. In contrast to the other deep learning reconstruction
 methods, the proposed one used the likelihood of prior as the training loss and the
-objective function in reconstruction to improve the image quality.
+objective function in reconstruction to improve the image quality. In summary, the separation of the image prior and the encoding matrix embedded in the fidelity term made the proposed method
+more flexible and generic compared with conventional
+deep learning approaches as shown in Figure 1.
 
 
 **`Method`** There two stages in our approach. The first is to learn prior information from an existing dataset using PixelCNN, and the second is to maximize the posterior using the sub-gradient projection method as illustrated in Figure 2.
