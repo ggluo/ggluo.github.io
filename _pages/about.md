@@ -24,7 +24,7 @@ My academic background overlaps machine learning, magnetic resonance imaging, si
 I am truly passionate about remaining at the intersection of these fields and driving innovation alongwith fellow researchers from the sides of both MR and machine learning. Feel free to explore my [CV](/assets/pdf/cv.pdf) to learn more about me.
 
 Over the past five years, I have been actively working on MR image reconstruction, closely following the rapid developments in the machine learning community. 
-I have developed a Python library, **[spreco](https://github.com/mrirecon/spreco)**, for training generative models based on TensorFlow. This library has been used in many of my [projects](/projects/) focused on MR image reconstruction.
+I have developed a Python library, **[spreco](https://github.com/mrirecon/spreco)**, for training generative models, based on TensorFlow. This library has been used in many of my [projects](/projects/) focused on MR image reconstruction.
 
 
 Apart from my research, I love soccer, tennis and photography. 
