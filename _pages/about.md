@@ -8,14 +8,12 @@ profile:
   align: right
   image: photo_ski.jpg
   image_circular: false # crops the image to make it circular
-  address:   >  #<p>office: ggluo@github</p>
-    <p>email: luoguan5@gmail.com</p>
-    <p>Göttingen, Germany</p>
+  address:   >  #<p>office: ggluo@github</p><p>email: luoguan5@gmail.com</p><p>Göttingen, Germany</p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false  # includes social icons at the bottom of the page
+social: true  # includes social icons at the bottom of the page
 ---
 
 I'm currently doing my Ph.D. in computer science at University of Göttingen. Throughout my Ph.D. journey since 2020, I have been working closely with [Prof. Dr. Martin Uecker](https://scholar.google.com/citations?user=r7BG-ZYAAAAJ&hl=en), a renowned expert in the field of MR image reconstruction, who is associated with both [IBI](https://www.tugraz.at/institute/ibi/institute/team/) at Graz University of Technology and the department of radiology at [University Medicine Center Göttingen](https://radiologie.umg.eu/forschung/arbeitsgruppen/kardiovaskulaere-mrt-forschung-computational-mri-ag-uecker/).
