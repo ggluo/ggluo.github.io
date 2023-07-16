@@ -55,7 +55,7 @@ appear when using 8-fold acceleration and are highlighted with
 CI after thresholding. 
 Selected regions of interests are presented in a zoomed view.
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/sampling_posterior/fusion.png" title="overview" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/sampling_posterior/fusion.png" title="highlight hallucinations with the uncertainty map" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post" style="margin-bottom: 1.15rem">
     Figure 3. See if you can find hallucinations above.
 </div>
@@ -81,7 +81,7 @@ with stepsize $$\gamma > 0$$, $$k=1,...,K$$ and $$x_i^1 := x^K_{i+1}$$ with $$x_
       variance$$_\text{2}$$ were computed from unextended samples and extended samples respectively. Extended samples converge to $$x_\text{MAP}$$.
 
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/sampling_posterior/map_end.png" title="overview" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/sampling_posterior/map_end.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post" style="margin-bottom: 1.15rem">
     Figure 4. Have a look at two variance maps.
 </div>

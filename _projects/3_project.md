@@ -21,7 +21,7 @@ Building on this previous [project](/projects/4_project/), this work aims to dep
 We validated the reconstruction pipeline using radial brain scans and the [SENSE](https://pubmed.ncbi.nlm.nih.gov/10542355/) model regularized by a log-likelihood image prior.
 
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem; margin-top: 1rem">
-{% include figure.html path="assets/img/projects/bart_tf/spreco.png" width="400" title="overview" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/bart_tf/spreco.png" width="400" title="spreco" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post">
     Figure 2. The structure of spreco.
 </div>

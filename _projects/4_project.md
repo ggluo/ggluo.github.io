@@ -46,7 +46,7 @@ The image reconstruction is achieved by exploring the posterior $$f(x\mid y)$$ w
 In this way, the reconstruction problem is recast as posterior probability calculations.
 
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/map/algo.png" title="overview" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/map/algo.png" title="algorithm" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post" style="margin-bottom: 1.15rem">
     Figure 2. The proposed reconstruction algorithm.
 </div>
