@@ -35,8 +35,10 @@
               {%- endif -%}
               {%- if project.colab -%}
               <div class="colab-icon">
-                <div id="icon" data-toggle="tooltip" title="Try it on Colab">
-                  <a href="{{ project.colab }}" style="margin-left: 10px; margin-bottom: 0px;"><i class="fab fa-google-drive"></i></a>
+                <div id="icon" data-toggle="tooltip" title="Open in Colab">
+                  <a href="{{ project.colab }}" style="margin-left: 10px; margin-bottom: 0px;">
+                    <img src="https://colab.research.google.com/assets/colab-badge.svg">
+                  </a>
                 </div>
               </div>
               {%- endif -%}
