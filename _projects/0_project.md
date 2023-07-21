@@ -14,7 +14,7 @@ toc:
 
 
 ## Overview 
-This post will give a brief introduction to the usage of [spreco](https://github.com/mrirecon/spreco). Spreco is a tool for MR researchers to train generative priors for image reconstruction, developed with TensorFlow. It is recommended to use it on a Linux-based system. The same to most workflows in deep learning, we can use it by following steps below.
+This post will give a brief introduction to the usage of [spreco](https://github.com/mrirecon/spreco). Spreco is a tool for MR researchers to train generative priors for image reconstruction, developed with TensorFlow. It is recommended to use it on a Linux-based system. The same to most workflows in deep learning, we can use it following steps below.
 
 1. The preparation of data
 2. Training of generative priors
@@ -76,7 +76,7 @@ gpu_id: '0,1,2,3'
 
 ### Script for training
 
-After the configuration file is done, you need to write a script to start training that includes the read of configuration file, the initialization of the dataloader, and the start of the trainer. The below is an example.
+After the configuration file is done, you need to write a script to start training that includes the read of configuration file, the initialization of the dataloader, and the start of the trainer. The below is an example. Once the training is started, you can use TensorBoard to monitor the losses for training by specifying where the log folder is.
 
 ```python
 
