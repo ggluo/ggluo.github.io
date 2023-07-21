@@ -171,7 +171,7 @@ e = exporter(log  = "./PixelCNN/cplx_large",
              default_out=False,
              path="./PixelCNN/exported",
              name="cplx_large", gpu_id='0')
-             
+
 x = tf.placeholder(tf.float32, shape=[1, 256, 256, 2], name="input_0")
 
 
@@ -183,4 +183,4 @@ e.export([x], [loss], attach_gradients=True)
 
 We prepare a complete [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggluo/image-priors/blob/release/misc/demo_image_priors_colab.ipynb) to demonstrate how to use the trained generative priors when using BART for image reconstruction. 
 
-Once you have gone through the whole workflow, you can start to collect feedback and iterate models.
+Once you have gone through the whole workflow, you can start to collect feedback and iterate models. If there is any question or feedback for us, leave them below.
