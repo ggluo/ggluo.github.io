@@ -17,7 +17,7 @@ related_publications: Luo__2021_a, Blumenthal_Magn.Reson.Med._2023
 </div>
 
 **`Abstract`** 
-Building on this previous [project](/projects/4_project/), this work aims to deploy the trained model with an MR image reconstruction toolbox, **[BART](https://github.com/mrirecon/bart)**, which is a versatile framework for image reconstruction. As shown in Figure 1, there are two steps to realize this: (a) export the constructed computation graph with TensorFlow; (b) use the graph as regularization in BART.
+As the image priors are almost always trained in an offline setting, this work aims to deploy the trained model with an MR image reconstruction toolbox, **[BART](https://github.com/mrirecon/bart)**, which is a versatile framework for image reconstruction. As shown in Figure 1, there are two steps to realize this: (a) export the constructed computation graph with TensorFlow; (b) use the graph as regularization in BART.
 We validated the reconstruction pipeline using radial brain scans and the [SENSE](https://pubmed.ncbi.nlm.nih.gov/10542355/) model regularized by a log-likelihood image prior.
 
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem; margin-top: 1rem">
