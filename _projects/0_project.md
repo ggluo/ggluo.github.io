@@ -166,7 +166,12 @@ tf.disable_eager_execution()
 
 import numpy as np
 
-e = exporter("./PixelCNN/cplx_large", "pixelcnn", default_out=False, path="./PixelCNN/exported", name="cplx_large", gpu_id='0')
+e = exporter(log  = "./PixelCNN/cplx_large",
+             meta = "pixelcnn",
+             default_out=False,
+             path="./PixelCNN/exported",
+             name="cplx_large", gpu_id='0')
+             
 x = tf.placeholder(tf.float32, shape=[1, 256, 256, 2], name="input_0")
 
 
