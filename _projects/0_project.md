@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hands-on tutorials for spreco
+title: A hands-on tutorial for spreco
 description: spreco, generative pretraining, image priors
 img: assets/img/projects/image_priors/image_priors.png
 importance: 5
