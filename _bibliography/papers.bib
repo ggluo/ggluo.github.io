@@ -28,20 +28,6 @@ abbr = {ISMRM},
   pdf = {bart_tf.pdf}
 }
 
-@InProceedings{Luo__2022_a,
-abbr = {ISMRM},
-  Title         = {Using data-driven Markov chains for MRI reconstruction with joint uncertainty estimation},
-  Author        = {Guanxiong Luo and Martin Heide and Martin Uecker},
-  Booktitle     = {Proc. Intl. Soc. Mag. Reson. Med.},
-  year          = {2022},
-
-  address       = {London, UK},
-  pages         = {0298},
-  volume        = {30},
-  pre = {Power Pitch},
-  pdf = {mcmc.pdf}
-}
-
 @InProceedings{Luo__2022a,
 abbr = {ISMRM},
   Title         = {All you need are DICOM images},
@@ -55,6 +41,21 @@ abbr = {ISMRM},
   pdf           = {all_dicom.pdf},
   pre = {Poster}
 }
+@InProceedings{Luo__2022_b,
+abbr = {ISMRM},
+  Title         = {Using data-driven Markov chains for MRI reconstruction with joint uncertainty estimation},
+  Author        = {Guanxiong Luo and Martin Heide and Martin Uecker},
+  Booktitle     = {Proc. Intl. Soc. Mag. Reson. Med.},
+  year          = {2022},
+
+  address       = {London, UK},
+  pages         = {0298},
+  volume        = {30},
+  pre = {Power Pitch},
+  pdf = {mcmc.pdf}
+}
+
+
 
 @InProceedings{Luo__2020,
 abbr = {ISMRM},
@@ -115,7 +116,7 @@ code = "https://github.com/ggluo/proximator-net"
   journal  = {Magn. Reson. Med.},
   year     = {2023},
   volume   = {89},
-  number   = {2},
+  number   = {2}, 
   pages    = {678-693},
   abstract = {Purpose To develop a deep-learning-based image reconstruction framework for reproducible research in MRI. Methods The BART toolbox offers a rich set of implementations of calibration and reconstruction algorithms for parallel imaging and compressed sensing. In this work, BART was extended by a nonlinear operator framework that provides automatic differentiation to allow computation of gradients. Existing MRI-specific operators of BART, such as the nonuniform fast Fourier transform, are directly integrated into this framework and are complemented by common building blocks used in neural networks. To evaluate the use of the framework for advanced deep-learning-based reconstruction, two state-of-the-art unrolled reconstruction networks, namely the Variational Network and MoDL, were implemented. Results State-of-the-art deep image-reconstruction networks can be constructed and trained using BART's gradient-based optimization algorithms. The BART implementation achieves a similar performance in terms of training time and reconstruction quality compared to the original implementations based on TensorFlow. Conclusion By integrating nonlinear operators and neural networks into BART, we provide a general framework for deep-learning-based reconstruction in MRI.},
   doi      = {https://doi.org/10.1002/mrm.29485},

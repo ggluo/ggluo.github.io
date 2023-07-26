@@ -6,7 +6,7 @@ img: assets/img/projects/sampling_posterior/sampling_posterior.png
 importance: 5
 github: https://github.com/mrirecon/spreco
 colab: https://colab.research.google.com/github/mrirecon/spreco/blob/main/examples/scripts/demo_recon.ipynb
-related_publications: Luo_Magn.Reson.Med._2023, Luo__2022_a
+related_publications: Luo_Magn.Reson.Med._2023, Luo__2022_b
 ---
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem">
 {% include figure.html path="assets/img/projects/sampling_posterior/overview.png" width="400" title="overview" class="img-fluid rounded z-depth-1" %}
