@@ -6,8 +6,8 @@ description: publications by categories in reversed chronological order.
 sections:
   - bibquery: "@misc|@phdthesis|@mastersthesis"
     text: "Thesis"
-  #- bibquery: "@arxiv"
-    #text: "Preprints"
+  - bibquery: "@arxiv"
+    text: "Preprints"
   - bibquery: "@article"
     text: "Journal Articles"
   - bibquery: "@inproceedings"
