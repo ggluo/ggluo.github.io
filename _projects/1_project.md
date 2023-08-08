@@ -30,7 +30,7 @@ information of the image is not available.
 </div>
 </div>
 
-In total, we trained six priors in this work with a small phase-preserved dataset and phase-augmented images using the full ABIDE dataset with 1206 volumes. The information about computational resources used to train the fix different priors is listed in below table.
+In total, we trained six priors in this work with a small phase-preserved dataset and phase-augmented images using the full ABIDE dataset with 1206 volumes. The information about computational resources used to train the six different priors is listed in below table.
 <div class="col-sm mt-3 mt-md-0">
 {% include figure.html path="assets/img/projects/image_priors/priors_table.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
 </div>
