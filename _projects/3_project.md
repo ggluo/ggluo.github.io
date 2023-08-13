@@ -7,7 +7,7 @@ importance: 5
 category: work
 github: https://github.com/mrirecon/bart
 colab: https://colab.research.google.com/github/mrirecon/bart-workshop/blob/master/ismrm2021/bart_tensorflow/bart_tf.ipynb
-related_publications: Luo__2021_a, Blumenthal_Magn.Reson.Med._2023
+related_publications: Luo__2021_a, Blumenthal_Magn.Reson.Med._2023, luo2023generative
 ---
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem">
 {% include figure.html path="assets/img/projects/bart_tf/bart_tf.png" width="400" title="overview" class="img-fluid rounded z-depth-1" %}
@@ -17,7 +17,7 @@ related_publications: Luo__2021_a, Blumenthal_Magn.Reson.Med._2023
 </div>
 
 **`Abstract`** 
-As the image priors are almost always trained in an offline setting, this work aims to deploy the trained model with an MR image reconstruction toolbox, **[BART](https://github.com/mrirecon/bart)**, which is a versatile framework for image reconstruction. As shown in Figure 1, there are two steps to realize this: (a) export the constructed computation graph with TensorFlow; (b) use the graph as regularization in BART.
+As the image priors are almost always trained in an offline setting using Python, this work aims to deploy the trained model with an MR image reconstruction toolbox, **[BART](https://github.com/mrirecon/bart)**, which is a versatile tool for image reconstruction. As shown in Figure 1, there are two steps to realize this: (a) export the constructed computation graph with TensorFlow; (b) use the graph as regularization in BART.
 We validated the reconstruction pipeline using radial brain scans and the [SENSE](https://pubmed.ncbi.nlm.nih.gov/10542355/) model regularized by a log-likelihood image prior.
 
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem; margin-top: 1rem">
@@ -33,7 +33,7 @@ We validated the reconstruction pipeline using radial brain scans and the [SENSE
 3. Efficient dataloader for medical images
 4. Customizable with a configuration file
 
-And we trained a log-likelihood prior, $$\log p({x};\mathtt{NET}(\hat{\Theta}, {x}))$$[$$^1$$](https://arxiv.org/abs/1701.05517), which is used to impose learned prior knowledge of images in the SENSE model. 
+And we trained a log-likelihood prior, $$\log p({x};\mathtt{NET}(\hat{\Theta}, {x}))$$[$$^1$$](https://arxiv.org/abs/1701.05517)[$$^{,\ 2}$$](https://arxiv.org/abs/2011.13456), which is used to impose learned prior knowledge of images in the SENSE model. 
 The reconstruction is commonly formulated as the following minimization problem
 \begin{equation}
     \hat{x}=\underset{x}{\arg\min}\ \|\mathcal{A}{x}-{y}\|_2^2 + \lambda \log p({x};\mathtt{NET}(\hat{\Theta}, {x})),\nonumber
