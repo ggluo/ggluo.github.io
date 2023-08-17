@@ -5,8 +5,8 @@ description: generative pretraining, image priors, diffusion models, inverse pro
 img: assets/img/projects/image_priors/image_priors.png
 importance: 5
 category: work
-github: https://github.com/ggluo/image-priors
-colab: https://colab.research.google.com/github/ggluo/image-priors/blob/release/misc/demo_image_priors_colab.ipynb
+github: https://github.com/mrirecon/image-priors
+colab: https://colab.research.google.com/github/mrirecon/image-priors/blob/main/misc/demo_image_priors_colab.ipynb
 related_publications: Luo__2022a, Luo__2021_b, Luo__2021_a, luo2023generative
 ---
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem">
