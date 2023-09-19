@@ -5,7 +5,7 @@ description: sampling posterior, Bayesian inference, diffusion models, uncertain
 img: assets/img/projects/sampling_posterior/sampling_posterior.png
 importance: 5
 github: https://github.com/mrirecon/spreco
-colab: https://colab.research.google.com/github/mrirecon/spreco/blob/main/examples/scripts/demo_recon.ipynb
+colab: https://colab.research.google.com/github/ggluo/bayesianMRI/blob/main/examples/scripts/demo_recon.ipynb
 related_publications: Luo_Magn.Reson.Med._2023, Luo__2022_b
 ---
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem">
