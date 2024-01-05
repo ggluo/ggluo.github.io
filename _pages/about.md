@@ -6,7 +6,7 @@ subtitle: Glad that this corner is found by you 😃!
 
 profile:
   align: right
-  image: photo_ski.jpg
+  image: photo_ski_2.jpg
   image_circular: false # crops the image to make it circular
   address:   >  #<p>office: ggluo@github</p><p>email: luoguan5@gmail.com</p><p>Göttingen, Germany</p>
 
