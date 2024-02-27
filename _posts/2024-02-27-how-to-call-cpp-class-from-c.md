@@ -1,13 +1,13 @@
 ---
 layout: distill
 title: How to call cpp class from c
-date: 2023-02-27 10:54 +0100
-markdown: 
-  syntax_highlighter: pygments
+date: 2023-01-27 10:54 +0100
 toc:
   - name: Define a C++ class
   - name: Define a C wrapper
   - name: Use the wrapper in C
+tag:
+    - c++
 ---
 
 Calling a C++ class from C can be a bit tricky because C does not support classes and objects like C++. However, you can still interact with C++ code from C by creating a C interface for your C++ class. In this example, we define a C++ class MyClass with a method doSomething(). Then, we create a C wrapper MyClassWrapper that provides functions to create, manipulate, and destroy instances of MyClass. Finally, we can use these functions in a C program to interact with the MyClass object. See [github](https://github.com/ggluo/Call-cpp-class-from-c).
