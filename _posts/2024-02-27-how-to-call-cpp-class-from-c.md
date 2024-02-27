@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: How to call cpp class from c
+title: How to Call C++ Class from C
 date: 2023-01-27 10:54 +0100
 toc:
   - name: Define a C++ class
