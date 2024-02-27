@@ -37,6 +37,18 @@ https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#installin
 To use display mode, again surround your expression with `$$` and place it as a separate paragraph.
 Here is an example:
 
+if you don't have tensorflow
+```shell
+conda create --name rt python=3.9
+conda activate rt
+cd anaconda3/envs/rt
+conda install ipython
+conda install tensorflow-gpu
+```
+
+
+
+
 $$
 \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
 $$
