@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create a table of figure using latex
+title: Create a Table of Figures using Latex
 date: 2023-01-04 19:19 +0100
 tag:
     - latex
