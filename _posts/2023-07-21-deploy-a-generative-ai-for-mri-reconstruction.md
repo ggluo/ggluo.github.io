@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: Deploy your deep learning models with tensorrt
+title: Deploy a Generative AI for MRI Reconstruction
 date: 2023-07-21 16:38 +0200
 
 authors:
