@@ -3,7 +3,8 @@ layout: post
 title: "How Bindings Work with I/O in TensorRT"
 date: 2023-03-08 12:31 +0100
 tag: 
-    - c++, tensorRT
+    - c++
+    - tensorRT
 ---
 
 In TensorRT, a "binding" refers to the association between a tensor in the computational graph (network) and a specific memory buffer that holds the data for that tensor during inference. Bindings are used to specify how input and output tensors of a neural network are mapped to memory buffers where the input data is provided and where the output data is retrieved after inference.
