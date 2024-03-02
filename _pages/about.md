@@ -22,7 +22,7 @@ My academic background overlaps machine learning, magnetic resonance imaging, si
 I am truly passionate about remaining at the intersection of these fields and driving innovation along with fellow researchers from the sides of both MR and machine learning. Feel free to explore my [CV](/assets/pdf/cv.pdf) to learn more about me.
 
 Over the past five years, I have been actively working on MR image reconstruction with generative models. Feel free to check my [projects](/projects/) page. 
-You will find I have used python, C/C++, shell and Latex in my projects on [ggluo](https://github.com/ggluo)@github. I have spent much time with JAX/Tensorflow/Pytorch.
+You will find I have used python, C/C++, shell and Latex in my projects on [ggluo@github](https://github.com/ggluo). I have spent much time with JAX/Tensorflow/Pytorch.
 
 
 Apart from my research, I love soccer, tennis, and photography.
