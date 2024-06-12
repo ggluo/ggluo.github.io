@@ -30,7 +30,7 @@ This method generates a new sequence of images $$\{\tilde{x}_1, \ldots, \tilde{x
 </div>
 
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="https://arxiv.org/html/2405.14327v2/x2.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="https://arxiv.org/html/2405.14327v2/x3.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post" style="margin-bottom: 1.15rem">
 Top: A sequence of images from dataset is shown in the first row and is used as conditioning to generate retrospective samples that are shown in the second row. Bottom: With the given sequence in the top as a warm start, prospective samples extend it and are shown.
 </div>
@@ -43,7 +43,7 @@ A fixed-length sliding window is initialized with the given sequence $$x_{<n}=\{
 </div>
 
 **MRI reconstruction**:
-For the visual impression of the improvement by the AID model in reconstruction, we show the reconstructed images in \cref{fig:recon2} and more of them in \cref{ap:recon}. The images reconstructed using AID are more visually similar to the reference images than using Guide, even which also provides aliased-free images. Furthermore, it is worth noting that more visually notable hallucinations were introduced by the Guide model than the AID model, which means AID is more trustworthy.
+For the visual impression of the improvement by the AID model in reconstruction, we show the reconstructed images in the following figure and more of them in Appendix. The images reconstructed using AID are more visually similar to the reference images than using Guide, even which also provides aliased-free images. Furthermore, it is worth noting that more visually notable hallucinations were introduced by the Guide model than the AID model, which means AID is more trustworthy.
 <div class="col-sm mt-3 mt-md-0">
 {% include figure.html path="https://arxiv.org/html/2405.14327v2/x9.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post" style="margin-bottom: 1.15rem">
