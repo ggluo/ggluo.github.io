@@ -11,7 +11,8 @@ horizontal: true
 In recent years, deep learning methods have made significant advancements in fast MRI reconstruction, yielding many promising results. However, challenges are constantly rising. Supervised methods for MR reconstruction are costly because of the collection of [k-space](https://en.wikipedia.org/wiki/K-space_(magnetic_resonance_imaging)) label data and a model for one specific application is hard to apply to other applications. Apart from that, worries about the uncertainty caused by undersampling strategies and deep learning algorithms have limited their usage in clinical practice until now, which could lead to hallucinations. The application of generative image priors is one way out.
 
 I’m currently working on diffusion models and its application on MRI reconstruction.<br/>
-I use python, C/C++, shell and Latex. I also a developer for [BART](https://github.com/mrirecon/bart). I have spent much time with Tensorflow/Pytorch/JAX.<br/>
+I use python, C/C++, shell and Latex. I also a developer for [BART](https://github.com/mrirecon/bart).<br/>
+I have spent much time with Tensorflow/Pytorch/JAX.<br/>
 I have a proven track record of developing and deploying generative models
 
 Feel free to email me if you are interested in my projects.
