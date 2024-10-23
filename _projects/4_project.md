@@ -4,6 +4,8 @@ title: MRI reconstruction using deep Bayesian estimation
 description: generative model, PixelCNN, Bayesian estimation, MR image reconstruction, optimization
 img: assets/img/projects/map/overview.png
 importance: 5
+category: work
+permalink: /projects/map-mri-reconstruction
 github: https://github.com/mrirecon/spreco
 related_publications: Luo_Magn.Reson.Med._2020
 ---

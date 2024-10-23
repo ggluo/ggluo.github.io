@@ -5,6 +5,7 @@ description: autoregressive, diffusion models, image sequences, inverse problem,
 img: https://arxiv.org/html/2405.14327v2/x1.png
 importance: 4
 category: work
+permalink: /projects/autoregressive-diffusion
 github: https://github.com/mrirecon/aid
 #colab: https://colab.research.google.com/github/mrirecon/aid/blob/main/scripts/demo_recon.ipynb
 related_publications: luo2024autoregressive, Luo_Magn.Reson.Med._2023

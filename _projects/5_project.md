@@ -4,6 +4,8 @@ title: Generalized deep learning-based proximal gradient descent for MR reconstr
 description: MR image reconstruction, proximal gradient descent, denoising autoencoder
 img: assets/img/projects/aime/aime_2023.png
 importance: 5
+category: work
+permalink: /projects/proximator-net-mri-reconstruction
 github: https://github.com/ggluo/proximator-net
 related_publications: Luo_AIME_2023
 ---
