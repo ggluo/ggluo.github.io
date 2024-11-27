@@ -2,12 +2,10 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: MR research is not rocket science, but also very cool 😃!
 nav: true
 nav_order: 1
 horizontal: true
 ---
-**`Overview`**
 I developed autogressive image diffusion models - [AID](https://github.com/mrirecon/aid)  for MRI reconstruction.<br/>
 I’m currently working on diffusion models and its application on MRI reconstruction.<br/>
 I use python, C/C++, shell and Latex. I also a developer for [BART](https://github.com/mrirecon/bart).<br/>
