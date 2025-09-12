@@ -4,14 +4,14 @@ permalink: /publications/
 title: Publications
 description: publications by categories in reversed chronological order.
 sections:
-  - bibquery: "@misc|@phdthesis|@mastersthesis"
-    text: "Thesis"
   - bibquery: "@arxiv"
     text: "Preprints"
   - bibquery: "@inproceedings"
     text: "Conference Proceedings"
   - bibquery: "@article"
     text: "Journal Articles"
+  - bibquery: "@misc|@phdthesis|@mastersthesis"
+    text: "Thesis"
   - bibquery: "@inabstracts"
     text: "Conference Abstracts"
 nav: true
