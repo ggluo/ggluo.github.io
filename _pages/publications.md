@@ -8,12 +8,14 @@ sections:
     text: "Thesis"
   - bibquery: "@arxiv"
     text: "Preprints"
+  - bibquery: "@inproceedings"
+    text: "Conference Proceedings"
   - bibquery: "@article"
     text: "Journal Articles"
-  - bibquery: "@inproceedings"
-    text: "Conference Proceedings and Abstracts"
+  - bibquery: "@inabstracts"
+    text: "Conference Abstracts"
 nav: true
-years: [2024, 2023, 2022, 2021, 2020, 2019,2017]
+years: [2025,2024, 2023, 2022, 2021, 2020, 2019,2017]
 nav_order: 2
 ---
 <!-- _pages/publications.md -->
