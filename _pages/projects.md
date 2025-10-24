@@ -6,13 +6,9 @@ nav: true
 nav_order: 1
 horizontal: true
 ---
-I developed autogressive image diffusion models - [AID](https://github.com/mrirecon/aid)  for MRI reconstruction.<br/>
-I’m currently working on diffusion models and its application on MRI reconstruction.<br/>
-I use python, C/C++, shell and Latex. I also a developer for [BART](https://github.com/mrirecon/bart).<br/>
-I have spent much time with Tensorflow/Pytorch/JAX.<br/>
-I have a proven track record of developing and deploying generative models
+I have been working on diffusion and generative modeling for solving complex inverse problems in imaging and signal reconstruction. My work explores how self-diffusion processes and autoregressive diffusion architectures can recover high-fidelity data while providing principled uncertainty estimation.
 
-Feel free to email me if you are interested in my projects.
+I bridge deep generative modeling, Bayesian inference, and software engineering, developing models that move seamlessly from theory to deployment. Using frameworks like PyTorch, TensorFlow, and TensorRT, I build full-stack systems that make cutting-edge generative methods practical for real-world applications.
 
 <!-- pages/projects.md -->
 <div class="projects">
