@@ -1,51 +1,56 @@
 ---
 layout: page
-title: Generative Image Priors for MRI Reconstruction Trained from Magnitude-Only Images
-description: generative pretraining, image priors, diffusion models, inverse problem, MR image reconstruction, proximal operator, optimization
-img: assets/img/projects/image_priors/image_priors.png
-importance: 5
+title: "Autogressive image diffusion: generation of image sequences and application in MRI reconstruction"
+description: autoregressive, diffusion models, image sequences, inverse problem, MRI reconstruction
+img: https://arxiv.org/html/2405.14327v2/x1.png
+importance: 4
 category: work
-permalink: /projects/image-priors-mri-reconstruction
-github: https://github.com/mrirecon/image-priors
-colab: https://colab.research.google.com/github/ggluo/image-priors/blob/main/misc/demo_image_priors_colab.ipynb
-related_publications: Luo__2022a, Luo__2021_b, Luo__2021_a, luo2023generative
+permalink: /projects/autoregressive-diffusion
+github: https://github.com/mrirecon/aid
+#colab: https://colab.research.google.com/github/mrirecon/aid/blob/main/scripts/demo_recon.ipynb
+related_publications: luo2024autoregressive, Luo_Magn.Reson.Med._2023
 ---
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem">
-{% include figure.html path="assets/img/projects/image_priors/image_priors.png" width="400" title="overview" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="https://arxiv.org/html/2405.14327v2/x1.png" width="400" title="overview" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post">
     Figure 1. Overview of the proposed method.
 </div>
 </div>
 
-**`Abstract`** In this work, we present a workflow to construct generic and robust generative image priors from magnitude-only images. The priors can then be used for regularization in reconstruction to improve image quality. The workflow begins with the preparation of training datasets from magnitude-only MR images. This dataset is then augmented with phase information and used to train generative priors of complex images. Finally, trained priors are evaluated using both linear and nonlinear reconstruction for compressed sensing parallel imaging with various undersampling schemes. The results of our experiments demonstrate that priors trained on complex images outperform priors trained only on magnitude images. Additionally, a prior trained on a larger dataset exhibits higher robustness. Finally, we show that the generative priors are superior to L$$^\mathrm{1}$$-wavelet regularization for compressed sensing parallel imaging with high undersampling.
+**`Abstract`** Magnetic resonance imaging (MRI) is a widely used non-invasive imaging modality. However, a persistent challenge lies in balancing image quality with imaging speed. This trade-off is primarily constrained by k-space measurements, which traverse specific trajectories in the spatial Fourier domain (k-space). These measurements are often undersampled to shorten acquisition times, resulting in image artifacts and compromised quality. Generative models learn image distributions and can be used to reconstruct high-quality images from undersampled k-space data. In this work, we present the autoregressive image diffusion (AID) model for image sequences and use it to sample the posterior for accelerated MRI reconstruction. The algorithm incorporates both undersampled k-space and pre-existing information. Models trained with fastMRI dataset are evaluated comprehensively. The results show that the AID model can robustly generate sequentially coherent image sequences. In 3D and dynamic MRI, the AID can outperform the standard diffusion model and reduce hallucinations, due to the learned inter-image dependencies.
 
-**`TLDR`** These findings stress the importance of incorporating phase information and leveraging large datasets to raise the performance and reliability of the generative priors for MRI reconstruction. Phase augmentation makes it possible to use existing image databases for training.
+**`TLDR`** In 3D and dynamic MRI, the AID can outperform the standard diffusion model and reduce hallucinations, due to the learned inter-image dependencies.
 
-We leverage a diffusion model trained on a small dataset (1000 images) of complex images to augment a much larger dataset (~80k images) for which the phase
-information of the image is not available.
+To test different aspects of the autoregressive diffusion models, we generate the sequence of images using the following two approaches.
+
+**Retrospective and prospective (warm start) sampling**:
+This method generates a new sequence of images $$\{\tilde{x}_1, \ldots, \tilde{x}_{N-1}\}$$ based on the given sequence $$\{x_0, \ldots, x_N\}$$. $$\tilde{x}_n$$ is sampled using the reverse process given $$\{x_0, \ldots, x_{n-1}\}$$.
 
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/image_priors/phase_aug.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="https://arxiv.org/html/2405.14327v2/x2.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+</div>
+
+<div class="col-sm mt-3 mt-md-0">
+{% include figure.html path="https://arxiv.org/html/2405.14327v2/x3.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post" style="margin-bottom: 1.15rem">
-    Human brain images of different quality are shown (rows). On the left, the original magnitude-only images are compared to the magnitude of a corresponding image generated using phase augmentation. On the right, the phase maps of three different  generated images are shown.
+Top: A sequence of images from dataset is shown in the first row and is used as conditioning to generate retrospective samples that are shown in the second row. Bottom: With the given sequence in the top as a warm start, prospective samples extend it and are shown.
 </div>
 </div>
 
-In total, we trained six priors in this work with a small phase-preserved dataset and phase-augmented images using the full ABIDE dataset with 1206 volumes. The information about computational resources used to train the six different priors is listed in below table.
+**Prospective sampling (cold start)**:
+A fixed-length sliding window is initialized with the given sequence $$x_{<n}=\{x_0, \ldots, x_{N-1}\}$$. $$x_N$$ is generated using reverse process with the current window as conditioning. Subsequently, the window is updated by adding the newly generated $$x_N$$ and removing the earliest image $$x_0$$. This autoregressive sampling process is repeated until the stop condition is met. We refer to this process as a warm start. In a cold start, the window is initialized with zeros, and each element $$x_n$$ in it is updated with newly generated images from the beginning to the end, after which the generation is warmed up.
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/image_priors/priors_table.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="https://arxiv.org/html/2405.14327v2/x4.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
 </div>
 
- Comparison of images reconstructed using PICS using the priors $$\texttt{P}_\mathrm{SM},~\texttt{P}_\mathrm{LM},~\texttt{P}_\mathrm{SC},~\texttt{P}_\mathrm{LC},~\texttt{D}_\mathrm{SC}$$ in comparison to an $$\ell_1$$-wavelet reconstruction and a reference. The top two rows (1D) present the results for 5-fold acceleration along phase-encoding direction with 30 calibration lines. The bottom two rows (Poisson) show the results using a Poisson-disc acquisition of 8.2x-undersampling. PSNR and SSIM values are shown in white text.
-
+**MRI reconstruction**:
+For the visual impression of the improvement by the AID model in reconstruction, we show the reconstructed images in the following figure and more of them in Appendix. The images reconstructed using AID are more visually similar to the reference images than using Guide, even which also provides aliased-free images. Furthermore, it is worth noting that more visually notable hallucinations were introduced by the Guide model than the AID model, which means AID is more trustworthy.
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/image_priors/pics.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="https://arxiv.org/html/2405.14327v2/x9.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+<div class="caption_post" style="margin-bottom: 1.15rem">
+E: equispaced, R: random. The red lines are autocalibration signal (ACS) and equispaced mask is not shown. Zero-filled images are computed by inverse Fourier transform of the zero-filled k-space data. The hallucinations are pointed with red arrows.
+</div>
 </div>
 
-**`Conclusion`**This work focuses on how to extract prior knowledge from existing
-magnitude-only image datasets using phase augmentation with generative models.
-The extracted prior knowledge is then applied as regularization in image
-reconstruction. The effectiveness of this approach in improving image quality
-is systematically evaluated  across different settings. Our findings stress the
-importance of incorporating phase information and leveraging large datasets to
-raise performance and reliability of generative priors for MRI reconstruction.
+
+**`Conclusion`** The proposed autoregressive image diffusion model offers an approach to generating image sequences, with significant potential as a trustworthy prior in accelerated MRI reconstruction. In various experiments, it outperforms the standard diffusion model in terms of both image quality and robustness by taking the advantage of the prior information on inter-image dependencies.
