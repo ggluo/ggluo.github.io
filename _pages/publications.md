@@ -5,15 +5,15 @@ title: Publications
 description: publications by categories in reversed chronological order.
 sections:
   - bibquery: "@arxiv"
-    text: "Preprints"
+    text: "Preprint"
   - bibquery: "@inproceedings"
-    text: "Conference Proceedings"
+    text: "Conference Paper"
   - bibquery: "@article"
-    text: "Journal Articles"
+    text: "Journal Article"
   - bibquery: "@misc|@phdthesis|@mastersthesis"
     text: "Thesis"
   - bibquery: "@inabstracts"
-    text: "Conference Abstracts"
+    text: "Conference Abstract"
 nav: true
 years: [2025,2024, 2023, 2022, 2021, 2020, 2019,2017]
 nav_order: 2
