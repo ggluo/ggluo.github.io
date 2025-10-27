@@ -1,59 +1,99 @@
 ---
 layout: page
-title: Deploy generative image priors for image reconstruction using BART
-description: MR image reconstruction, model deployment, TensorFlow C API, TensorFlow computation graph
-img: assets/img/projects/bart_tf/bart_tf.png
-importance: 5
+title: Bayesian MRI reconstruction with joint uncertainty estimation using diffusion models
+description: sampling posterior, Bayesian inference, diffusion models, uncertainty estimation, inverse problem, MR image reconstruction, Monte Carlo, Markov chain
+img: assets/img/projects/sampling_posterior/sampling_posterior.png
+importance: 4
 category: work
-permalink: /projects/bart-tf-mri-reconstruction
-github: https://github.com/mrirecon/bart
-colab: https://colab.research.google.com/github/mrirecon/bart-workshop/blob/master/ismrm2021/bart_tensorflow/bart_tf.ipynb
-related_publications: Luo__2021_a, Blumenthal_Magn.Reson.Med._2023, luo2023generative
+permalink: /projects/sampling-posterior-mri-reconstruction
+github: https://github.com/mrirecon/spreco
+colab: https://colab.research.google.com/github/ggluo/Bayesian-MRI/blob/master/demo_recon.ipynb
+related_publications: Luo_Magn.Reson.Med._2023, Luo__2022_b
 ---
 <div style="float: right; margin-left: 1rem; margin-bottom: 0rem">
-{% include figure.html path="assets/img/projects/bart_tf/bart_tf.png" width="400" title="overview" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/sampling_posterior/overview.png" width="400" title="overview" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post">
     Figure 1. Overview of the proposed method.
 </div>
 </div>
 
-**`Abstract`** 
-As the image priors are almost always trained in an offline setting using Python, this work aims to deploy the trained model with an MR image reconstruction toolbox, **[BART](https://github.com/mrirecon/bart)**, which is a versatile tool for image reconstruction. As shown in Figure 1, there are two steps to realize this: (a) export the constructed computation graph with TensorFlow; (b) use the graph as regularization in BART.
+**`Abstract`** In recent years, the application of deep
+learning has made significant advancements in fast MRI
+reconstruction, yielding promising results. However,
+worries about the uncertainty caused by undersampling
+strategies and algorithms have limited their usage in
+clinical practice until now, which could lead to hallucinations. Therefore, the uncertainty
+assessment constitutes an important step
+for deep learning-based approaches. The uncertainty is twofold:
+(1) the uncertainty of weights inside the neural
+network; and (2) the uncertainty introduced by the
+missing k-space data points. The uncertainty from missing
+k-space data points can be addressed in a Bayesian imaging framework. 
+
+**`TLDR`** All in all, a deep learning-based method has enough capability to generate a realistic-looking image even when the problem is highly underdetermined as a result of undersampling, but the uncertainties inside it cannot be ignored.
 
 
-The deployment of models trained with spreco into BART requires minimum environmental prerequisites, providing a practical and user-friendly solution for medical image reconstruction tasks.
-
-<div style="float: right; margin-left: 1rem; margin-bottom: 0rem; margin-top: 1rem">
-{% include figure.html path="assets/img/projects/bart_tf/spreco.png" width="400" title="spreco" class="img-fluid rounded z-depth-1" %}
-<div class="caption_post">
-    Figure 2. The structure of spreco.
+<div style="float: right;margin-right: 0rem; margin-left: 1rem; margin-bottom: 0rem; width: auto; ">
+{% include video.html path="assets/img/projects/sampling_posterior/r_samples.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true muted=true %}
+<div class="caption_post" style="margin-bottom: 0.3rem; margin-top: -0.5rem">
+    Figure 2. Visualization of the samples.
 </div>
 </div>
 
-**`Method`** We developed a Python library for training generative models, **[spreco](https://github.com/mrirecon/spreco)**, based on TensorFlow, which has the following features:
-1. Distributed training 
-2. Interruptible training
-3. Efficient dataloader for medical images
-4. Customizable with a configuration file
+Samples are drawn from the posterior distribution given the k-space using the Markov
+chain Monte Carlo (MCMC) method. The minimum mean square error (MMSE)
+and maximum a posterior (MAP) estimates are computed. The chains are the reverse of a diffusion process (c.f., Figure 1). Score-based generative models are
+used to construct chains and are learned from an image database.
+The unknown data distribution $$q(x_0)$$ of the training images goes through repeated Gaussian diffusion and
+finally reaches a known Gaussian distribution $$q(x_N)$$, and this process is reversed by learned transition kernels $$p_\theta(x_{i-1}|x_i)$$. To simulate samples from the
+posterior of the image given the [k-space](https://en.wikipedia.org/wiki/K-space_(magnetic_resonance_imaging)), $$y$$, a new Markov chain is constructed by incorporating the measurement model into the reverse process (red chain).
 
-And we trained a log-likelihood prior, $$\log p({x};\mathtt{NET}(\hat{\Theta}, {x}))$$[$$^1$$](https://arxiv.org/abs/1701.05517)[$$^{,\ 2}$$](https://arxiv.org/abs/2011.13456), which is used to impose learned prior knowledge of images in the SENSE model. 
-The reconstruction is commonly formulated as the following minimization problem
+
+
+**`Highlight`** In Figure 3, reconstructions are $$\ell_1$$-ESPIRiT, XPDNet, $$x_\text{MMSE}$$
+highlighted with confidence interval (CI), $$x_\text{MMSE}$$
+and a fully-sampled coil-combined image (CoilComb). All methods provide nearly aliasing-free reconstruction at four- or eightfold acceleration. Hallucinations
+appear when using 8-fold acceleration and are highlighted with
+CI after thresholding. 
+Selected regions of interests are presented in a zoomed view.
+<div class="col-sm mt-3 mt-md-0">
+{% include figure.html path="assets/img/projects/sampling_posterior/fusion.png" title="highlight hallucinations with the uncertainty map" class="img-fluid rounded z-depth-1" %}
+<div class="caption_post" style="margin-bottom: 1.15rem">
+    Figure 3. See if you can find hallucinations above.
+</div>
+</div>
+
+**`Theory`** Using Bayes' formula one obtains for each $$i$$ the desired distribution $$p\left (x_i \mid y\right )$$ from 
 \begin{equation}
-    \hat{x}=\underset{x}{\arg\min}\ \|\mathcal{A}{x}-{y}\|_2^2 + \lambda \log p({x};\mathtt{NET}(\hat{\Theta}, {x})),\nonumber
-    \label{eq:1}
+p\left(x\_i \mid y\right) \propto p\left(x\_i\right) p\left(y \mid x\_i\right)\quad \text{with}\quad p(y|x\_i) = \mathcal{CN}\left(y;\mathcal{A} x\_i, {\sigma}^2\_{\eta} {I}\right), \nonumber
 \end{equation}
-where the first term ensures data consistency between the acquired [k-space](https://en.wikipedia.org/wiki/K-space_(magnetic_resonance_imaging)) data $${y}$$ and the desired image $${x}$$, $$\mathcal{A}$$ is the forward operator. This problem is solved with [FISTA](https://www.ceremade.dauphine.fr/~carlier/FISTA) algorithm that has been implemented in BART. To use the learned log-likelihood prior with BART, we have implemented a [wrapper](https://github.com/mrirecon/bart/commit/8b8d4ed2a727bcbc19a11e9ddd64d46f7e5e21d9) using [TensorFlow C API]([$$^1$$](https://www.tensorflow.org/install/lang_c)) for the initialization, restoration and inference of the exported trained model. Click here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrirecon/bart-workshop/blob/master/ismrm2021/bart_tensorflow/bart_tf.ipynb) and give a quick tryout!
+where $$\mathcal{A}$$ is the parallel MRI forward model, $$x_i$$ is the $$i$$-th image and $$y$$ is given k-space data (c.f. Figure 1).
+Starting with the initial density $$q(x_N)\sim \mathcal{CN}(0,I)$$ at $$i=N$$, one obtains $$p(x_i)$$ with transition kernels $$\{p(x_j | x_{j+1})\}_{i \leq j < N}$$ 
+\begin{equation}
+p(x\_i) \propto p(x\_i | x\_{i+1}) \cdot ... \cdot p(x_{N-1} | x_N) \cdot q(x_N).\nonumber
+\end{equation}
+By estimating the transition kernel with the neural network, one obtains the kernel $$p_\theta(x_i \mid x_{i+1})$$ and therefore one can sample $$p_\theta(x_i | y)$$ with the unadjusted Langevin Monte Carlo method in order to get an estimate of $$x_i$$, i.e.
+\begin{equation}
+x\_i^{k+1} \leftarrow x\_i^{k} + \frac{\gamma}{2}\nabla\_{x\_i}\log p\_\theta(x\_{i}^{k}\mid y) + \sqrt{\gamma}{z},\quad z \sim \mathcal{CN}(0, {I}),\nonumber
+\end{equation}
+with stepsize $$\gamma > 0$$, $$k=1,...,K$$ and $$x_i^1 := x^K_{i+1}$$ with $$x_N^1 \sim \mathcal{CN}(0, {I})$$. 
 
-Figure 3 displays the evolution of image during the process of reconstruction.
-<div style="margin-bottom: 0rem">
-<div style="margin-bottom: -0.5rem">
-{% include video.html path="assets/img/projects/bart_tf/r_evo.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true muted=true %}
-</div>
-<div class="caption_post" style="margin-bottom: 1rem">
-    Figure 3. The left sub-figure shows the evolution of the probability density function (PDF) (dashed curves) and the empirically learned PDF (solid curves) at five selected pixels over iterations. The middle sub-figure shows the evolution of magnitude image. The right sub-figure shows the convergence of metrics.
+**`MMSE vs MAP`** 200 extended iterations after random exploration (i.e, without noise disturbance) and a deterministic estimate of
+      MAP are indicated by solid and dashed lines respectively. (a) PSNR and SSIM over iterations. (b) Variance$$_\text{1}$$ and
+      variance$$_\text{2}$$ were computed from unextended samples and extended samples respectively. Extended samples converge to $$x_\text{MAP}$$.
+
+<div class="col-sm mt-3 mt-md-0">
+{% include figure.html path="assets/img/projects/sampling_posterior/map_end.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+<div class="caption_post" style="margin-bottom: 1.15rem">
+    Figure 4. Have a look at two variance maps.
 </div>
 </div>
 
 
-**`Conclusion`** We showcased the seamless integration of a TensorFlow trained model into the existing MRI reconstruction workflows of the BART toolbox. 
-This integration allows us to leverage the image reconstruction capabilities offered by BART while harnessing the advantages of rapid prototyping of advanced deep learning models using TensorFlow.
+
+
+**`Conclusion`** All in all, a deep learning-based method has enough
+capability to generate a realistic-looking image even when
+the problem is highly underdetermined as a result of
+undersampling, but the uncertainties inside it cannot be
+ignored.
