@@ -6,9 +6,6 @@ nav: true
 nav_order: 1
 horizontal: true
 ---
-I have been working on diffusion and generative modeling for solving complex inverse problems in imaging and signal reconstruction. My work explores how self-diffusion processes and autoregressive diffusion architectures can recover high-fidelity data while providing principled uncertainty estimation.
-
-I bridge deep generative modeling, Bayesian inference, and software engineering, developing models that move seamlessly from theory to deployment. Using frameworks like PyTorch, TensorFlow, and TensorRT, I build full-stack systems that make cutting-edge generative methods practical for real-world applications.
 
 <!-- pages/projects.md -->
 <div class="projects">
