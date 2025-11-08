@@ -263,7 +263,7 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['c++', 'c', 'deep learning'] # these tags will be displayed on the front page of your blog
+display_tags: ['generative models', 'diffusion models', 'linear algebra', 'computational imaging', 'inverse problems', 'tools', 'coding'] # these tags will be displayed on the front page of your blog
 display_categories: [''] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------

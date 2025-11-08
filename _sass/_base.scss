@@ -424,8 +424,9 @@ footer.sticky-bottom {
     li {
       list-style: none;
       display: inline-block;
-      padding: 1rem 0.5rem;
+      padding: 0.3rem 0.4rem; /* reduced vertical padding */
       color: var(--global-text-color-light);
+      line-height: 0.9; /* slightly tighter vertical spacing */
     }
   }
 }
