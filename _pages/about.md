@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Glad that this corner is found by you 😃!
+subtitle: ""
 
 profile:
   align: right
