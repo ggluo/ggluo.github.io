@@ -44,17 +44,3 @@ An up-to-date list is available on [Google Scholar](https://scholar.google.com/c
   {%- endfor %}
 
 {%- endfor %}
-
-<div class="clustrmaps-small">
-  <div class="clustrmaps-container" style="display:flex;justify-content:center;margin-top:1rem;">
-    <script id="clstr_globe" src="//clustrmaps.com/globe.js?d=VmwBsxPxVDHo5jOgCLt-z4v5zFwHxmrSvQYKvcgpek4" defer></script>
-  </div>
-</div>
-
-<style>
-.clustrmaps-small {
-  transform: scale(0.2);       /* adjust 0.5–1.0 to taste */
-  transform-origin: center top; /* keeps it centered */
-  height: 30px;               /* optional: to control spacing */
-}
-</style>
