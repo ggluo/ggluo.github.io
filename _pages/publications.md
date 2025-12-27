@@ -44,8 +44,3 @@ An up-to-date list is available on [Google Scholar](https://scholar.google.com/c
   {%- endfor %}
 
 {%- endfor %}
-
-
-<div style="display: inline-block; width: 100px; height:20px; vertical-align: text-top; margin-left: 5px;">
-  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=VmwBsxPxVDHo5jOgCLt-z4v5zFwHxmrSvQYKvcgpek4&cl=ffffff&w=a"></script>
-</div>
