@@ -2,6 +2,7 @@
 layout: post
 title: Pseudoinverse Derivation
 date: 2025-11-06 14:53 +0100
+permalink: /blog/pseudoinverse
 tag:
     - linear algebra
 use_math: true

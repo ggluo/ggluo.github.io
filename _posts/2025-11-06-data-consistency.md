@@ -1,6 +1,7 @@
 ---
 layout: post
 title: data-consistency
+permalink: /blog/data-consistency
 date: 2025-11-06 15:40 +0100
 published: false
 ---

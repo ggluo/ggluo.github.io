@@ -1,6 +1,7 @@
 ---
 layout: distill
 title: Deploy a Generative AI for MRI Reconstruction using BART and TensorRT
+permalink: /blog/deploy-ai-models
 date: 2023-07-21 16:38 +0200
 
 authors:

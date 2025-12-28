@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How Bindings Work with I/O in TensorRT"
+permalink: /blog/tensorrt-bindings
 date: 2023-03-08 12:31 +0100
 tag: 
     - c++
