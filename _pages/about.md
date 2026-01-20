@@ -16,6 +16,6 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am an independent researcher working at the intersection of generative modeling and inverse problems. I maainly focus on computational imaging and signal processing. Improving image quality under limited information is one of my main research interests. My CV is available [here](/assets/pdf/cv.pdf).
+I am an independent researcher working at the intersection of generative modeling and inverse problems. I mainly focus on computational imaging and signal processing. Improving image quality under limited information is one of my main research interests. My CV is available [here](/assets/pdf/cv.pdf).
 
 Apart from my research, I love soccer, tennis, and photography.
