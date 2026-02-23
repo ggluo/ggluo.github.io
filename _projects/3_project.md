@@ -3,7 +3,7 @@ layout: page
 title: Generative Image Priors for MRI Reconstruction Trained from Magnitude-Only Images
 description: generative pretraining, image priors, diffusion models, inverse problem, MR image reconstruction, proximal operator, optimization
 img: assets/img/projects/image_priors/image_priors.png
-importance: 5
+importance: 4
 category: work
 permalink: /projects/image-priors-mri-reconstruction
 github: https://github.com/mrirecon/image-priors
