@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Autogressive image diffusion: generation of image sequences and application in MRI reconstruction"
-description: autoregressive, diffusion models, image sequences, inverse problem, MRI reconstruction
+description: NeurIPS 2024, autoregressive, diffusion models, image sequences, inverse problem, MRI reconstruction
 img: https://arxiv.org/html/2405.14327v2/x1.png
 importance: 4
 category: work

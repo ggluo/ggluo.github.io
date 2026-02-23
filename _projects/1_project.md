@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Self-diffusion for solving inverse problems"
-description: diffusion models, inverse problem, lower level vision, MRI reconstruction
+description: NeurIPS 2025, self-diffusion models, inverse problem, lower level vision, MRI reconstruction
 img: assets/img/projects/self-diffusion/overview.png
 importance: 4
 category: work
