@@ -2,7 +2,7 @@
 layout: page
 title: "Self-diffusion Driven Blind Imaging"
 description: CVPR 2026, Computational imaging, Blind image deblur, Self-diffusion, Inverse problem, Optical aberrations
-img: https://arxiv.org/html/2510.27439v2/x1.png
+img: https://arxiv.org/html/2510.27439v2/x7.png
 importance: 4
 category: work
 permalink: /projects/DeblurSDI
