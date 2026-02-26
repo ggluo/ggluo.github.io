@@ -4,8 +4,8 @@ permalink: /publications/
 title: Publications
 description: publications by categories in reversed chronological order.
 sections:
-  - bibquery: "@arxiv"
-    text: "Preprint"
+  #- bibquery: "@arxiv"
+  #  text: "Preprint"
   - bibquery: "@inproceedings"
     text: "Conference Paper"
   - bibquery: "@article"
