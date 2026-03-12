@@ -1,9 +1,9 @@
 ---
 layout: post
-title: data-consistency
+title: Data consistency in Imaging
 permalink: /blog/data-consistency
 date: 2025-11-06 15:40 +0100
-published: false
+published: true
 ---
 You've hit on a key difference between two common approaches to data consistency. The paper uses the pseudoinverse ($A^+$), while tools like BART often use the adjoint ($A^*$), and they are used for fundamentally different reasons.
 
