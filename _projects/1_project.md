@@ -31,22 +31,26 @@ This regularization effect is modulated by the noise level $$\sigma_t$$. In earl
 
 **`Results`** As a teaser, we evaluated self-diffusion on a large image of size (5000$$\times$$3000), which is from an inexperienced shooter and corrupted by dust spots and minor noise. We masked the dust spots using a binary mask then restored the image using self-diffusion. Apart from this, we listed some of our results in the paper from different settings such as inpainting, image denoising and MRI reconstruction.
 
+<div style="float: right;margin-right: 0rem; margin-left: 1rem; margin-bottom: 0rem; width: auto; ">
+{% include video.html path="assets/img/projects/self-diffusion/SDI-promotion.mp4" class="img-fluid rounded z-depth-1" controls=false autoplay=true loop=true muted=true %}
+</div>
+
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/self-diffusion/boost-over.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/self-diffusion/boost-over.png" title="Comparison" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post" style="margin-bottom: 1.15rem">
 The noise on the cloudy sky and sea surface are removed, while the details on the architecture are preserved. The restoration takes around 2 hours on RTX A6000.
 </div>
 </div>
 
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/self-diffusion/boost.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/self-diffusion/boost.png" title="Boosted" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post" style="margin-bottom: 1.15rem">
 The boosted image using self-diffusion. Open it in a new tab to see the full image.
 </div>
 </div>
 
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/self-diffusion/original.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/self-diffusion/original.png" title="Original" class="img-fluid rounded z-depth-1" %}
 <div class="caption_post" style="margin-bottom: 1.15rem">
 The original image. Open it in a new tab to see the full image.
 </div>
@@ -55,17 +59,17 @@ The original image. Open it in a new tab to see the full image.
 **Inpainting**:
 Comparison of inpainting results across different methods (DIP, Aseq, w/o noise SDI, SDI) against the ground truth (GT).
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/self-diffusion/inpainting.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/self-diffusion/inpainting.png" title="Inpainting" class="img-fluid rounded z-depth-1" %}
 </div>
 
 **Denoising**:
 Visual comparison of denoising results across different methods against the ground truth. IR-SDE by Luo et al., 2023; FFDNET by Zhang et al., 2018.
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/self-diffusion/denoise.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/self-diffusion/denoise.png" title="Denoising" class="img-fluid rounded z-depth-1" %}
 </div>
 
 **MRI reconstruction**: Reconstruction from 4$$\times$$ undersampled k-space with 20 ACS lines using different methods ($$\mathcal{A}^H\mathbf{y}$$,IMJENSE, DIP, Aseq, w/o noise SDI, SDI) and corresponding error maps are shown.
 
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/projects/self-diffusion/mri-4x-20.png" title="MMSE vs MAP" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/projects/self-diffusion/mri-4x-20.png" title="MRI Reconstruction" class="img-fluid rounded z-depth-1" %}
 </div>
