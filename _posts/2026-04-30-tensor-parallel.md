@@ -41,7 +41,7 @@ toc:
 
 **Tensor Parallelism (TP)** is one of the core model-parallel strategies for large-scale distributed training. It shards individual module weights across multiple GPUs — each GPU holds a slice of the weight matrix, computes locally, and the partial results are merged through collective communication. The merged result is mathematically equivalent to what a single GPU would produce with the full weights.
 
-TP operates at the module level and targets **Linear layers** — the most parameter-heavy components in a Transformer. This post walks through the full picture: Column/Row Parallel, Sequence Parallel, communication-computation overlap, and a complete toy implementation. The code is open-sourced at [tensor_parallel_toy](https://github.com/ggluo/tensor_parallel_toy), built on the original work by [@xiabingquan](https://github.com/xiabingquan/tensor_parallel).
+TP operates at the module level and targets **Linear layers** — the most parameter-heavy components in a Transformer. This post walks through the full picture: Column/Row Parallel, Sequence Parallel, communication-computation overlap, and a complete toy implementation. The code is open-sourced at [tensor_parallel_toy](https://github.com/ggluo/tensor-parallel), built on the original work by [@xiabingquan](https://github.com/xiabingquan/tensor_parallel).
 
 **Prerequisites**: PyTorch, NCCL collective basics (AllReduce, AllGather, ReduceScatter).
 
