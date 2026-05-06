@@ -19,7 +19,19 @@ related_publications: luo2024autoregressive, Luo_Magn.Reson.Med._2023
 
 **`Abstract`** Magnetic resonance imaging (MRI) is a widely used non-invasive imaging modality. However, a persistent challenge lies in balancing image quality with imaging speed. This trade-off is primarily constrained by k-space measurements, which traverse specific trajectories in the spatial Fourier domain (k-space). These measurements are often undersampled to shorten acquisition times, resulting in image artifacts and compromised quality. Generative models learn image distributions and can be used to reconstruct high-quality images from undersampled k-space data. In this work, we present the autoregressive image diffusion (AID) model for image sequences and use it to sample the posterior for accelerated MRI reconstruction. The algorithm incorporates both undersampled k-space and pre-existing information. Models trained with fastMRI dataset are evaluated comprehensively. The results show that the AID model can robustly generate sequentially coherent image sequences. In 3D and dynamic MRI, the AID can outperform the standard diffusion model and reduce hallucinations, due to the learned inter-image dependencies.
 
-**`TLDR`** In 3D and dynamic MRI, the AID can outperform the standard diffusion model and reduce hallucinations, due to the learned inter-image dependencies.
+**`TLDR`** In 3D and dynamic MRI, the AID can outperform the standard diffusion model and reduce hallucinations, due to the learned inter-image dependencies. The generated volumes are shown as below.
+
+<div class="row" style="margin-bottom: 2rem;">
+<div class="col-sm-4 mt-3 mt-md-0">
+{% include figure.html path="assets/img/projects/aid/abide_vol.gif" title="ABIDE Volume" class="img-fluid rounded z-depth-1" %}
+</div>
+<div class="col-sm-4 mt-3 mt-md-0">
+{% include figure.html path="assets/img/projects/aid/cine.gif" title="Brain" class="img-fluid rounded z-depth-1" %}
+</div>
+<div class="col-sm-4 mt-3 mt-md-0">
+{% include figure.html path="assets/img/projects/aid/brain.gif" title="CINE" class="img-fluid rounded z-depth-1" %}
+</div>
+</div>
 
 To test different aspects of the autoregressive diffusion models, we generate the sequence of images using the following two approaches.
 
