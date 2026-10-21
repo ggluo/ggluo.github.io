@@ -20,6 +20,6 @@ I work on generative models for imaging: diffusion models, autoregressive models
 
 Since June 2026 I have been a Senior Algorithm Engineer as a contractor at Apple in Munich, working on computational imaging. Before that I was a postdoctoral research fellow at the Luxembourg Institute of Health, and before that a research scientist at Göttingen, where I also completed my PhD with Prof. Dr. Martin Uecker in computer science. And before that an M.Phil at the University of Hong Kong and a B.Eng at Xi'an Jiaotong University. I review for NeurIPS, ICML, ICLR, CVPR, AISTATS, TMLR and several IEEE and medical imaging journals.
 
-I am open to research and engineering roles in generative AI, computational imaging and ML systems. My [CV](/assets/pdf/CV.pdf) has the details.
+I am open to research and engineering roles in generative AI, computational imaging and ML systems. My [CV](/assets/pdf/cv.pdf) has the details.
 
 Outside work I play soccer and tennis, and I take photographs.
