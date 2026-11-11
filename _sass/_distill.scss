@@ -35,6 +35,35 @@ d-article {
     display: inline;
   }
 
+  blockquote.callout {
+    font-size: 1rem;
+    font-style: normal;
+    margin: 1.2em 0;
+    padding: 0.7em 1em;
+    border-left: 4px solid var(--global-theme-color);
+    border-radius: 0 6px 6px 0;
+    background-color: var(--global-code-bg-color);
+    p {
+      margin: 0;
+      font-style: normal;
+    }
+    p + p {
+      margin-top: 0.5em;
+    }
+    &.callout-good {
+      border-left-color: #42b983;
+      background-color: rgba(66, 185, 131, 0.12);
+    }
+    &.callout-warn {
+      border-left-color: #e7c000;
+      background-color: rgba(231, 192, 0, 0.12);
+    }
+    &.callout-bad {
+      border-left-color: #cc0000;
+      background-color: rgba(204, 0, 0, 0.10);
+    }
+  }
+
   // Style taken from code blocks
   details {  
     color: var(--global-text-color);
