@@ -35,6 +35,41 @@ d-article {
     display: inline;
   }
 
+  // Global layout tweaks for all distill posts
+
+  // Keep wide content inside the text column: scroll locally, never overflow the page
+  mjx-container[display="true"] {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 0.8em 0 !important;
+    padding: 2px 0;
+  }
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-bottom: 1.2em;
+    th, td {
+      line-height: 1.4;
+      padding: 4px 8px;
+    }
+    mjx-container {
+      font-size: 100% !important;
+    }
+  }
+  pre {
+    max-width: 100%;
+    overflow-x: auto;
+    line-height: 1.5;
+    code {
+      line-height: 1.5;
+    }
+  }
+  li > p {
+    margin-bottom: 0.3em;
+  }
+
   blockquote.callout {
     font-size: 1rem;
     font-style: normal;
@@ -176,5 +211,35 @@ d-appendix {
         grid-column: none;
       }
     }
+  }
+}
+
+// A long sidebar TOC must not stretch the first grid rows of the article
+@media (min-width: 1025px) {
+  d-article d-contents {
+    margin-bottom: -5000px;
+  }
+}
+
+@media (max-width: 600px) {
+  d-article table {
+    th, td {
+      font-size: 0.85rem;
+      padding: 3px 6px;
+    }
+  }
+}
+
+// Heading sizes (extra specificity so they beat the distill template defaults)
+body d-article {
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 1.6em;
+    margin-bottom: 0.7em;
+    padding-bottom: 0.25em;
+  }
+  h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.6em;
   }
 }
